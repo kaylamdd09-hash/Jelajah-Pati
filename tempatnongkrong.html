@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tempat Nongkrong - Jelajah Pati</title>
+
+    <link rel="stylesheet" href="tempatnongkrong.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Jelajah Pati.</a>
+
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="wisata.html">Wisata</a>
+            <a href="kuliner.html">Kuliner</a>
+            <a href="budaya.html">Budaya</a>
+            <a href="tempatnongkrong.html" class="aktif">Tempat Nongkrong</a>
+        </div>
+    </nav>
+
+
+    <!-- HEADER -->
+    <section class="header-nongkrong">
+
+        <div class="eyebrow">TEMPAT NONGKRONG</div>
+
+        <h1>Temukan Tempat Favoritmu</h1>
+
+        <p>
+            Jelajahi berbagai tempat nongkrong di Pati,
+            mulai dari coffee shop hingga kafe dengan
+            suasana nyaman untuk menghabiskan waktu.
+        </p>
+
+    </section>
+
+
+    <!-- PENCARIAN -->
+    <section class="pencarian">
+        <input
+            type="text"
+            id="cariNongkrong"
+            placeholder="Cari tempat nongkrong..."
+        >
+    </section>
+
+
+    <!-- DAFTAR TEMPAT -->
+    <section class="container">
+
+        <!-- FILTER -->
+        <div class="filter-nongkrong">
+
+            <button class="filter-btn aktif" data-filter="semua">
+                Semua
+            </button>
+
+            <button class="filter-btn" data-filter="coffee">
+                Coffee Shop
+            </button>
+
+            <button class="filter-btn" data-filter="kafe">
+                Kafe & Eatery
+            </button>
+
+        </div>
+
+
+        <!-- KARTU TEMPAT NONGKRONG -->
+        <div class="daftar-nongkrong" id="daftarNongkrong">
+
+
+            <!-- DAMA COFFEE -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/dama-coffee.jpg" alt="Dama Coffee">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Dama Coffee</h3>
+                    <p class="lokasi">Muktiharjo, Margorejo, Pati</p>
+
+                    <p>
+                        Salah satu pilihan tempat untuk menikmati
+                        kopi dan menghabiskan waktu bersama teman
+                        dengan suasana santai.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Dama%20Coffee"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- BROTHERHOOD COFFEE -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/brotherhood-coffee.jpeg" alt="Brotherhood Coffee">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Brotherhood Coffee</h3>
+                    <p class="lokasi">Kabupaten Pati</p>
+
+                    <p>
+                        Tempat menikmati kopi dan berkumpul
+                        bersama teman dalam suasana santai.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Brotherhood%20Coffee"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- FUNTRIV -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/funtriv.jpg" alt="Funtriv Coffee Hub">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Funtriv Coffee Hub</h3>
+                    <p class="lokasi">Pati Wetan, Pati</p>
+
+                    <p>
+                        Pilihan tempat untuk menikmati minuman
+                        dan menghabiskan waktu bersama teman.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Funtriv%20Coffee%20Hub"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- CIRCA CAFE -->
+            <article class="nongkrong-card" data-kategori="kafe">
+                <img src="images/circa-cafe.jpg" alt="Circa Cafe">
+
+                <div class="isi-card">
+                    <span class="kategori">Kafe & Eatery</span>
+                    <h3>Circa Cafe</h3>
+                    <p class="lokasi">Pati Lor, Pati</p>
+
+                    <p>
+                        Kafe yang bisa menjadi pilihan untuk
+                        bersantai dan menikmati makanan maupun minuman.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Circa%20Cafe"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- SELASAR -->
+            <article class="nongkrong-card" data-kategori="kafe">
+                <img src="images/selasar.jpg" alt="Selasar Coffee and Gelato">
+
+                <div class="isi-card">
+                    <span class="kategori">Kafe & Eatery</span>
+                    <h3>Selasar Coffee and Gelato</h3>
+                    <p class="lokasi">Muktiharjo, Margorejo, Pati</p>
+
+                    <p>
+                        Tempat menikmati kopi dan gelato
+                        untuk menemani waktu santai.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Selasar%20Coffee%20and%20Gelato"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- KOPI WOLU -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/kopi-wolu.jpg" alt="Kopi Wolu">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Kopi Wolu</h3>
+                    <p class="lokasi">Pati Kidul, Pati</p>
+
+                    <p>
+                        Pilihan kedai kopi untuk menikmati
+                        waktu santai bersama teman.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Kopi%20Wolu"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- J KOPI -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/j-kopi.jpeg" alt="J Kopi">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>J Kopi</h3>
+                    <p class="lokasi">Kabupaten Pati</p>
+
+                    <p>
+                        Pilihan tempat untuk menikmati kopi
+                        dan bersantai bersama teman.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=J%20Kopi"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- HIKARI -->
+            <article class="nongkrong-card" data-kategori="kafe">
+                <img src="images/hikari.jpg" alt="Hikari Cafe and Eatery">
+
+                <div class="isi-card">
+                    <span class="kategori">Kafe & Eatery</span>
+                    <h3>HIKARI Café & Eatery</h3>
+                    <p class="lokasi">Jl. Tondonegoro No. 16, Pati</p>
+
+                    <p>
+                        Kafe dengan konsep modern bernuansa Jepang
+                        yang menyediakan pilihan makanan dan minuman.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=HIKARI%20Caf%C3%A9%20%26%20Eatery"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- SANTE ALL DAY -->
+            <article class="nongkrong-card" data-kategori="kafe">
+                <img src="images/sante-all-day.jpg" alt="Sante All Day">
+
+                <div class="isi-card">
+                    <span class="kategori">Kafe & Eatery</span>
+                    <h3>Santé All Day</h3>
+                    <p class="lokasi">Jl. Pemuda No. 214, Pati</p>
+
+                    <p>
+                        Tempat nongkrong dengan pilihan minuman,
+                        makanan, dan suasana art space.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Sant%C3%A9%20All%20Day"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- SINESTESA -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/sinestesa.jpg" alt="Sinestesa">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Sinestesa</h3>
+                    <p class="lokasi">Muktiharjo, Margorejo, Pati</p>
+
+                    <p>
+                        Tempat menikmati kopi dan menghabiskan
+                        waktu dengan pilihan area indoor maupun outdoor.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Sinestesa"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- MORA -->
+            <article class="nongkrong-card" data-kategori="kafe">
+                <img src="images/mora.jpg" alt="Mora Social Brew">
+
+                <div class="isi-card">
+                    <span class="kategori">Kafe & Eatery</span>
+                    <h3>Mora Social Brew</h3>
+                    <p class="lokasi">Ngarus, Pati</p>
+
+                    <p>
+                        Kafe dengan pilihan makanan dan minuman
+                        untuk menemani waktu berkumpul.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Mora%20Social%20Brew"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- SENARA -->
+            <article class="nongkrong-card" data-kategori="kafe">
+                <img src="images/senara.jpg" alt="Senara">
+
+                <div class="isi-card">
+                    <span class="kategori">Kafe & Eatery</span>
+                    <h3>Senara</h3>
+                    <p class="lokasi">Kabupaten Pati</p>
+
+                    <p>
+                        Salah satu pilihan tempat untuk bersantai
+                        dan menghabiskan waktu bersama teman.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Senara"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- TOKO KOPI SAKA -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/tokokopi-saka.jpg" alt="Toko Kopi Saka">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Toko Kopi Saka</h3>
+                    <p class="lokasi">Kabupaten Pati</p>
+
+                    <p>
+                        Pilihan tempat untuk menikmati kopi
+                        dan mengisi waktu luang.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Toko%20Kopi%20Saka"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- ARARA COFFEE -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/arara-coffee.jpg" alt="Arara Coffee">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Arara Coffee & Co.</h3>
+                    <p class="lokasi">Jl. Diponegoro, Puri, Pati</p>
+
+                    <p>
+                        Coffee shop dengan pilihan kopi,
+                        minuman non-kopi, dan makanan.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Arara%20Coffee%20%26%20Co."
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- KEDAI SENDIKA -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/kedai-sendika.jpg" alt="Kedai Sendika">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Kedai Sendika</h3>
+                    <p class="lokasi">Sarirejo, Pati</p>
+
+                    <p>
+                        Kedai kopi dengan konsep coffee and book space
+                        untuk menikmati waktu yang lebih santai.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Kedai%20Sendika"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- KAIZEN COFFEE -->
+            <article class="nongkrong-card" data-kategori="kafe">
+                <img src="images/kaizen.jpg" alt="Kaizen Coffee and Eatery">
+
+                <div class="isi-card">
+                    <span class="kategori">Kafe & Eatery</span>
+                    <h3>Kaizen Coffee & Eatery</h3>
+                    <p class="lokasi">Jl. Dr. Setia Budi No. 24, Pati</p>
+
+                    <p>
+                        Tempat nongkrong yang menyediakan
+                        pilihan kopi dan makanan.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Kaizen%20Coffee%20%26%20Eatery"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- TJOKLAT DJOEANG -->
+            <article class="nongkrong-card" data-kategori="coffee">
+                <img src="images/tjoklat-djoeang.jpg" alt="Tjoklat Djoeang">
+
+                <div class="isi-card">
+                    <span class="kategori">Coffee Shop</span>
+                    <h3>Tjoklat Djoeang</h3>
+                    <p class="lokasi">Jl. P. Sudirman No. 30, Pati</p>
+
+                    <p>
+                        Tempat menikmati minuman kopi dan cokelat
+                        serta pilihan makanan ringan.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Tjoklat%20Djoeang"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- TRAFFA COFFEE -->
+            <article class="nongkrong-card" data-kategori="kafe">
+                <img src="images/traffa-coffee.jpeg" alt="Traffa Coffee">
+
+                <div class="isi-card">
+                    <span class="kategori">Kafe & Eatery</span>
+                    <h3>Traffa Coffee n Eatery</h3>
+                    <p class="lokasi">Jl. Kembang Joyo, Pati</p>
+
+                    <p>
+                        Tempat untuk menikmati kopi, makanan,
+                        dan menghabiskan waktu bersama teman.
+                    </p>
+
+                    <a href="detail-tempatnongkrong.html?nama=Traffa%20Coffee%20n%20Eatery"
+                       class="btn-detail">
+                        <span>Jelajahi Tempat</span>
+                        <span class="panah-detail">↗</span>
+                    </a>
+                </div>
+            </article>
+
+
+        </div>
+
+
+        <!-- PESAN KOSONG -->
+        <p class="pesan-kosong" id="pesanKosong">
+            Tempat nongkrong tidak ditemukan.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Jelajah Pati. Jelajahi dan kenali Pati lebih dekat.</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="tempatnongkrong.js"></script>
+
+</body>
+</html>

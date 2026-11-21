@@ -1,0 +1,600 @@
+
+/* =========================================
+   1. PENGATURAN DASAR
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #faf7fc;
+    color: #6f587e;
+    overflow-x: hidden;
+
+    background-image:
+        radial-gradient(circle, rgba(165,138,187,0.10) 2px, transparent 3px),
+        radial-gradient(circle, rgba(212,125,157,0.08) 2px, transparent 3px);
+
+    background-size: 38px 38px, 58px 58px;
+    background-position: 0 0, 19px 19px;
+}
+
+
+/* =========================================
+   2. NAVBAR
+========================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 7%;
+
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 4px 20px rgba(100,75,120,0.07);
+}
+
+.logo {
+    text-decoration: none;
+    color: #80649b;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #796b82;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #a58abb;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.menu a:hover,
+.menu a.aktif {
+    color: #a58abb;
+}
+
+.menu a:hover::after,
+.menu a.aktif::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   3. HEADER BUDAYA
+========================================= */
+
+.judul {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    text-align: center;
+    padding: 85px 20px 70px;
+
+    background:
+        radial-gradient(
+            circle at 10% 30%,
+            rgba(248,220,229,0.85) 0 75px,
+            transparent 76px
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(217,235,217,0.85) 0 95px,
+            transparent 96px
+        ),
+        linear-gradient(
+            120deg,
+            #eee4f5,
+            #fff3f7,
+            #f5edfa
+        );
+}
+
+/* Ornamen bunga */
+
+.judul::before {
+    content: "✿  ❀  ✿";
+    position: absolute;
+    top: 25px;
+    left: 6%;
+    font-size: 30px;
+    letter-spacing: 8px;
+    color: rgba(128,100,155,0.28);
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+
+.judul::after {
+    content: "❀  ✿  ❀";
+    position: absolute;
+    bottom: 20px;
+    right: 6%;
+    font-size: 30px;
+    letter-spacing: 8px;
+    color: rgba(212,125,157,0.35);
+    transform: rotate(15deg);
+    z-index: -1;
+}
+
+.subjudul {
+    color: #a58abb;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.judul h1 {
+    font-size: 42px;
+    color: #80649b;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.judul p {
+    max-width: 620px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #796b82;
+}
+
+
+/* =========================================
+   4. PENCARIAN
+========================================= */
+
+.pencarian {
+    display: flex;
+    justify-content: center;
+    padding: 35px 20px 20px;
+}
+
+.pencarian input {
+    width: 100%;
+    max-width: 520px;
+    padding: 16px 22px;
+
+    border: 1px solid #dfd0eb;
+    border-radius: 30px;
+
+    outline: none;
+    font-size: 13px;
+    color: #6f587e;
+    background: white;
+
+    box-shadow: 0 5px 18px rgba(100,75,120,0.06);
+    transition: 0.3s;
+}
+
+.pencarian input::placeholder {
+    color: #b3a4bd;
+}
+
+.pencarian input:focus {
+    border-color: #a58abb;
+    box-shadow: 0 0 0 4px rgba(165,138,187,0.13);
+}
+
+
+/* =========================================
+   5. FILTER BUDAYA
+========================================= */
+
+.filter-budaya {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    margin: 15px 0 35px;
+    padding: 0 6%;
+}
+
+.filter-btn {
+    padding: 10px 21px;
+
+    border: 1px solid #dfd0eb;
+    border-radius: 30px;
+
+    background: white;
+    color: #80649b;
+
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.aktif {
+    background: #a58abb;
+    border-color: #a58abb;
+    color: white;
+
+    box-shadow: 0 5px 12px rgba(165,138,187,0.2);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   6. DAFTAR BUDAYA
+========================================= */
+
+.daftar-budaya {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 35px 25px;
+    padding: 25px 8% 85px;
+
+    position: relative;
+}
+
+
+/* =========================================
+   7. KARTU BUDAYA
+========================================= */
+
+.budaya-card {
+    position: relative;
+    min-width: 0;
+
+    background: transparent;
+    border-radius: 24px;
+
+    transition: 0.35s ease;
+}
+
+.budaya-card:hover {
+    transform: translateY(-7px);
+}
+
+
+/* FOTO BUDAYA */
+
+.budaya-card img {
+    display: block;
+    width: 100%;
+    height: 245px;
+
+    object-fit: cover;
+    border-radius: 24px 24px 10px 10px;
+
+    box-shadow: 0 7px 20px rgba(100,75,120,0.10);
+    transition: transform 0.5s ease;
+}
+
+.budaya-card:hover img {
+    transform: scale(1.025);
+}
+
+
+/* INFORMASI KARTU */
+
+.isi-card {
+    position: relative;
+    z-index: 2;
+
+    width: calc(100% - 36px);
+    margin: -45px auto 0;
+    padding: 23px 21px 25px;
+
+    background: #ffffff;
+    border-radius: 22px 22px 10px 22px;
+
+    box-shadow: 0 8px 22px rgba(100,75,120,0.10);
+
+    min-height: 245px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition: 0.3s;
+}
+
+.budaya-card:hover .isi-card {
+    box-shadow: 0 12px 25px rgba(100,75,120,0.15);
+}
+
+
+/* LABEL KATEGORI */
+
+.kategori {
+    display: inline-block;
+
+    background: #eee4f5;
+    color: #80649b;
+
+    padding: 7px 13px;
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+/* Variasi warna label */
+
+.budaya-card:nth-child(3n+2) .kategori {
+    background: #f8dce5;
+    color: #b56e89;
+}
+
+.budaya-card:nth-child(3n) .kategori {
+    background: #d9ebd9;
+    color: #64866d;
+}
+
+
+/* JUDUL KARTU */
+
+.isi-card h3 {
+    color: #80649b;
+    margin: 14px 0 9px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+/* LOKASI */
+
+.isi-card .lokasi {
+    color: #b58a4a;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* DESKRIPSI */
+
+.isi-card p:not(.lokasi) {
+    color: #82778a;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   8. TOMBOL LIHAT DETAIL
+========================================= */
+
+.btn-detail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: auto;
+    padding: 10px 18px;
+
+    background: #a58abb;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 25px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 12px rgba(165,138,187,0.18);
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    background: #80649b;
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 15px rgba(128,100,155,0.22);
+}
+
+
+/* =========================================
+   9. PESAN KOSONG
+========================================= */
+
+.pesan-kosong {
+    display: none;
+
+    text-align: center;
+    color: #80649b;
+
+    margin: 20px auto 60px;
+    padding: 25px;
+
+    max-width: 500px;
+
+    background: #f0e9f5;
+    border: 1px dashed #c8b2d8;
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   10. FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+
+    background: #eee4f5;
+    color: #80649b;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    position: relative;
+    overflow: hidden;
+
+    border-top: 1px solid #e1d3eb;
+}
+
+footer::before {
+    content: "✿  ❀  ✿  ❀  ✿";
+    display: block;
+
+    color: #b69bc9;
+    font-size: 18px;
+    letter-spacing: 8px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   11. RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .daftar-budaya {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 28px 18px;
+    }
+
+    .budaya-card img {
+        height: 220px;
+    }
+
+    .isi-card {
+        width: calc(100% - 25px);
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================
+   12. RESPONSIVE HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+        padding: 18px 5%;
+    }
+
+    .menu {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 11px;
+    }
+
+    .judul {
+        padding: 55px 18px 45px;
+    }
+
+    .judul h1 {
+        font-size: 30px;
+    }
+
+    .judul p {
+        font-size: 12px;
+    }
+
+    .judul::before {
+        left: 2%;
+        font-size: 20px;
+    }
+
+    .judul::after {
+        right: 2%;
+        font-size: 20px;
+    }
+
+    .pencarian {
+        padding: 25px 6% 15px;
+    }
+
+    .filter-budaya {
+        justify-content: center;
+        gap: 8px;
+        padding: 0 5%;
+    }
+
+    .filter-btn {
+        padding: 9px 15px;
+        font-size: 11px;
+    }
+
+    .daftar-budaya {
+        grid-template-columns: 1fr;
+        padding: 15px 7% 60px;
+        gap: 25px;
+    }
+
+    .budaya-card img {
+        height: 240px;
+    }
+
+    .isi-card {
+        width: calc(100% - 28px);
+        margin-top: -40px;
+        padding: 22px;
+        min-height: auto;
+    }
+
+    .isi-card h3 {
+        font-size: 18px;
+    }
+
+    .btn-detail {
+        margin-top: 18px;
+    }
+
+    footer {
+        font-size: 11px;
+        padding: 22px 12px;
+    }
+
+}

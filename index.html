@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jelajah Pati</title>
+
+    <!-- Menghubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Jelajah Pati.
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="wisata.html">Wisata</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="tempatnongkrong.html">Tempat Nongkrong</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO / BAGIAN UTAMA -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                SELAMAT DATANG DI JELAJAH PATI
+            </p>
+
+            <h1>
+                Temukan Cerita di Setiap Sudut Pati
+            </h1>
+
+            <p class="hero-description">
+                Jelajahi keindahan alam, kuliner khas,
+                budaya, dan berbagai tempat menarik
+                yang ada di Kabupaten Pati.
+            </p>
+
+            <button onclick="jelajahiSekarang()">
+                Mulai Jelajahi
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- KATEGORI -->
+    <section class="kategori">
+
+        <div class="kategori-container">
+
+            <!-- WISATA -->
+            <a href="wisata.html" class="kategori-link">
+                <div class="kategori-item">
+
+                    <div class="kategori-icon wisata">
+                        🌿
+                    </div>
+
+                    <h3>Wisata</h3>
+
+                </div>
+            </a>
+
+
+            <!-- KULINER -->
+            <a href="kuliner.html" class="kategori-link">
+                <div class="kategori-item">
+
+                    <div class="kategori-icon kuliner">
+                        🍜
+                    </div>
+
+                    <h3>Kuliner</h3>
+
+                </div>
+            </a>
+
+
+            <!-- BUDAYA -->
+            <a href="budaya.html" class="kategori-link">
+                <div class="kategori-item">
+
+                    <div class="kategori-icon budaya">
+                        🏛️
+                    </div>
+
+                    <h3>Budaya</h3>
+
+                </div>
+            </a>
+
+
+            <!-- TEMPAT NONGKRONG -->
+            <a href="tempatnongkrong.html" class="kategori-link">
+                <div class="kategori-item">
+
+                    <div class="kategori-icon nongkrong">
+                        ☕
+                    </div>
+
+                    <h3>Tempat Nongkrong</h3>
+
+                </div>
+            </a>
+
+
+            <!-- REKOMENDASI -->
+            <a href="#destinasi" class="kategori-link">
+                <div class="kategori-item">
+
+                    <div class="kategori-icon rekomendasi">
+                        ⭐
+                    </div>
+
+                    <h3>Rekomendasi</h3>
+
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- DESTINASI POPULER -->
+    <section class="destinasi" id="destinasi">
+
+        <div class="section-header">
+
+            <div>
+                <h2>Jelajahi Pati</h2>
+
+                <p>
+                    Beberapa tempat menarik yang bisa kamu kunjungi.
+                </p>
+            </div>
+
+            <a href="wisata.html" class="lihat-semua">
+                Lihat Semua →
+            </a>
+
+        </div>
+
+
+        <!-- KARTU DESTINASI -->
+        <div class="destinasi-container">
+
+
+            <!-- WADUK GUNUNG ROWO -->
+            <div class="destinasi-card">
+
+                <img src="images/waduk-gunung-rowo.jpeg"
+                     alt="Waduk Gunung Rowo">
+
+                <div class="card-content">
+
+                    <h3>Waduk Gunung Rowo</h3>
+
+                    <p>📍 Kabupaten Pati</p>
+
+                    <span class="tag wisata-tag">
+                        Wisata Alam
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NASI GANDUL -->
+            <div class="destinasi-card">
+
+                <img src="images/nasi-gandul.jpg"
+                     alt="Nasi Gandul">
+
+                <div class="card-content">
+
+                    <h3>Nasi Gandul</h3>
+
+                    <p>📍 Kabupaten Pati</p>
+
+                    <span class="tag kuliner-tag">
+                        Kuliner Khas
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAKAM SYEKH JANGKUNG -->
+            <div class="destinasi-card">
+
+                <img src="images/makam-syekh-jangkung.jpg"
+                     alt="Makam Syekh Jangkung">
+
+                <div class="card-content">
+
+                    <h3>Makam Syekh Jangkung</h3>
+
+                    <p>📍 Kayen, Pati</p>
+
+                    <span class="tag budaya-tag">
+                        Wisata Budaya
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- HUTAN PINUS PANGONAN -->
+            <div class="destinasi-card">
+
+                <img src="images/hutan-pinus.png"
+                     alt="Hutan Pinus Pangonan">
+
+                <div class="card-content">
+
+                    <h3>Hutan Pinus Pangonan</h3>
+
+                    <p>📍 Tlogowungu, Pati</p>
+
+                    <span class="tag wisata-tag">
+                        Wisata Alam
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>Jelajah Pati.</h2>
+
+        <p>
+            Mengenal lebih dekat keindahan dan kekayaan
+            Kabupaten Pati.
+        </p>
+
+        <p class="copyright">
+            © 2026 Jelajah Pati. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>

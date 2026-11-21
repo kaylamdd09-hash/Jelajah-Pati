@@ -1,0 +1,804 @@
+
+/* ================================= */
+/* PENGATURAN DASAR */
+/* ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fffafd;
+    color: #76566c;
+    overflow-x: hidden;
+}
+
+
+/* ================================= */
+/* NAVBAR */
+/* ================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 4px 20px rgba(190, 133, 163, 0.09);
+}
+
+.logo {
+    text-decoration: none;
+    color: #d47d9d;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #896f83;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.aktif {
+    color: #d47d9d;
+}
+
+.menu a {
+    position: relative;
+}
+
+/* GARIS BAWAH NAVBAR */
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #d47d9d;
+    left: 0;
+    bottom: -7px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover::after,
+.menu a.aktif::after {
+    width: 100%;
+}
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.header-kuliner {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    text-align: center;
+    padding: 80px 20px 65px;
+
+    background:
+        radial-gradient(
+            circle at 12% 20%,
+            rgba(244, 180, 200, 0.35) 0 7px,
+            transparent 8px
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(168, 203, 176, 0.45) 0 8px,
+            transparent 9px
+        ),
+        linear-gradient(135deg, #fff0f5, #fff9ef 55%, #f0f8f0);
+}
+
+
+/* ORNAMEN HEADER */
+
+.header-kuliner::before,
+.header-kuliner::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+
+    border: 2px dashed rgba(212, 125, 157, 0.28);
+    border-radius: 50%;
+
+    z-index: -1;
+}
+
+.header-kuliner::before {
+    top: -80px;
+    left: -50px;
+
+    box-shadow:
+        0 0 0 12px rgba(244, 180, 200, 0.08),
+        0 0 0 25px rgba(168, 203, 176, 0.08);
+}
+
+.header-kuliner::after {
+    bottom: -105px;
+    right: -50px;
+
+    box-shadow:
+        0 0 0 12px rgba(244, 180, 200, 0.08),
+        0 0 0 25px rgba(168, 203, 176, 0.08);
+}
+
+.eyebrow {
+    display: inline-block;
+
+    color: #c47c9b;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.header-kuliner h1 {
+    font-size: 42px;
+    color: #b86d91;
+    margin-bottom: 15px;
+}
+
+.header-kuliner p {
+    max-width: 600px;
+    margin: auto;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #816e7d;
+}
+
+
+/* ================================= */
+/* CONTAINER */
+/* ================================= */
+
+.container {
+    position: relative;
+    padding: 55px 8%;
+
+    background:
+        radial-gradient(
+            circle at 2% 15%,
+            rgba(244, 180, 200, 0.16) 0 5px,
+            transparent 6px
+        ),
+        radial-gradient(
+            circle at 98% 70%,
+            rgba(168, 203, 176, 0.20) 0 5px,
+            transparent 6px
+        ),
+        #fffafd;
+}
+
+
+/* GARIS LENGKUNG */
+
+.container::before {
+    content: "";
+    display: block;
+
+    width: 110px;
+    height: 38px;
+
+    margin: 0 auto 30px;
+
+    border-top: 3px solid #e9a9bd;
+    border-radius: 50%;
+
+    opacity: 0.8;
+}
+
+.container > h2 {
+    font-size: 29px;
+    color: #b86d91;
+    margin-bottom: 10px;
+}
+
+.deskripsi {
+    color: #927b8d;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* ================================= */
+/* KULINER PILIHAN HARI INI */
+/* ================================= */
+
+.kuliner-pilihan {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    background: linear-gradient(120deg, #fff1f5, #fff9ef);
+
+    border-radius: 25px 10px 25px 10px;
+    overflow: hidden;
+
+    margin-bottom: 65px;
+
+    border: 1px solid #f5e2eb;
+
+    box-shadow:
+        0 8px 25px rgba(190, 133, 163, 0.10);
+
+    transition: 0.3s;
+}
+
+.kuliner-pilihan:hover {
+    box-shadow:
+        0 14px 32px rgba(190, 133, 163, 0.16);
+}
+
+.pilihan-gambar {
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.pilihan-gambar img {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.kuliner-pilihan:hover .pilihan-gambar img {
+    transform: scale(1.06);
+}
+
+.label-pilihan {
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+
+    background: #fff;
+    color: #bd7594;
+
+    padding: 11px 17px;
+    border-radius: 25px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(190, 133, 163, 0.16);
+}
+
+.pilihan-info {
+    flex: 1;
+    padding: 30px 35px 30px 0;
+}
+
+.subjudul-pilihan {
+    color: #c47c9b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.pilihan-info h2 {
+    color: #76566c;
+    font-size: 35px;
+    margin: 13px 0;
+}
+
+.pilihan-info p {
+    color: #816e7d;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.pilihan-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.pilihan-tag span {
+    background: #f9dce7;
+    color: #b76d8c;
+
+    padding: 9px 13px;
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+
+/* TOMBOL KENALI LEBIH JAUH */
+
+.tombol-pilihan {
+    display: inline-block;
+
+    background: #d47d9d;
+    color: white;
+
+    padding: 13px 23px;
+    border-radius: 25px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+
+    box-shadow: 0 6px 15px rgba(212, 125, 157, 0.20);
+
+    transition: 0.3s;
+}
+
+.tombol-pilihan:hover {
+    background: #b76d8c;
+    transform: translateY(-4px);
+
+    box-shadow: 0 9px 18px rgba(212, 125, 157, 0.25);
+}
+
+
+/* ================================= */
+/* PENCARIAN */
+/* ================================= */
+
+.pencarian {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px 35px;
+}
+
+.pencarian input {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 15px 20px;
+
+    border: 1px solid #f1dce6;
+    border-radius: 30px;
+
+    background: #fff;
+    outline: none;
+
+    color: #76566c;
+    font-size: 14px;
+
+    box-shadow: 0 5px 18px rgba(190, 133, 163, 0.07);
+
+    transition: 0.3s;
+}
+
+.pencarian input::placeholder {
+    color: #b99eaf;
+}
+
+.pencarian input:focus {
+    border-color: #d47d9d;
+
+    box-shadow:
+        0 0 0 4px rgba(212, 125, 157, 0.12);
+}
+
+
+/* ================================= */
+/* FILTER KATEGORI */
+/* ================================= */
+
+.filter-kuliner {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    padding: 11px 21px;
+
+    border: 1px solid #edcbd9;
+    border-radius: 25px;
+
+    background-color: #fff;
+    color: #bd7895;
+
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.aktif {
+    background-color: #d47d9d;
+    border-color: #d47d9d;
+    color: white;
+
+    box-shadow: 0 5px 14px rgba(212, 125, 157, 0.22);
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================= */
+/* DAFTAR KULINER */
+/* ================================= */
+
+.daftar-kuliner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+
+    padding: 0 5% 60px;
+}
+
+
+/* ================================= */
+/* KARTU KULINER */
+/* ================================= */
+
+.kuliner-card {
+    position: relative;
+
+    background-color: white;
+    border: 1px solid #f4e1ea;
+    border-radius: 22px 22px 22px 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(190, 133, 163, 0.08);
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.kuliner-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 14px 30px rgba(190, 133, 163, 0.17);
+}
+
+
+/* GAMBAR KARTU */
+
+.kuliner-card img {
+    display: block;
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.kuliner-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* ISI KARTU */
+
+.isi-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 22px;
+}
+
+.kategori {
+    display: inline-block;
+
+    background-color: #f9dce7;
+    color: #b76d8c;
+
+    padding: 7px 13px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.isi-card h3 {
+    color: #b86d91;
+    margin: 15px 0 9px;
+    font-size: 20px;
+}
+
+.isi-card p {
+    color: #816e7d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.isi-card .lokasi {
+    color: #9b8296;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+
+/* ================================= */
+/* TOMBOL LIHAT DETAIL */
+/* ================================= */
+
+.tombol-detail {
+    display: inline-block;
+
+    margin-top: 18px;
+    padding: 11px 20px;
+
+    background-color: #d47d9d;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 25px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 12px rgba(212, 125, 157, 0.17);
+
+    transition: 0.3s;
+}
+
+.tombol-detail:hover {
+    background-color: #b76d8c;
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 15px rgba(212, 125, 157, 0.25);
+}
+
+
+/* ================================= */
+/* PESAN KOSONG */
+/* ================================= */
+
+.pesan-kosong {
+    display: none;
+
+    text-align: center;
+    color: #987b90;
+
+    margin: 20px 0 45px;
+    padding: 25px;
+
+    background: #fff1f5;
+    border: 1px dashed #e9b8ca;
+    border-radius: 18px;
+
+    font-size: 14px;
+}
+
+
+/* ================================= */
+/* FOOTER */
+/* ================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+
+    background: #f6dce7;
+    color: #986b83;
+
+    font-size: 13px;
+}
+
+
+/* ================================= */
+/* RESPONSIVE TABLET */
+/* ================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .daftar-kuliner {
+        gap: 20px;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .kuliner-card img {
+        height: 210px;
+    }
+
+    .pilihan-info h2 {
+        font-size: 29px;
+    }
+}
+
+
+/* ================================= */
+/* RESPONSIVE TABLET KECIL */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+    .kuliner-pilihan {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .pilihan-gambar,
+    .pilihan-info {
+        width: 100%;
+    }
+
+    .pilihan-gambar img {
+        height: 280px;
+    }
+
+    .pilihan-info {
+        padding: 28px;
+    }
+
+    .pilihan-info h2 {
+        font-size: 29px;
+    }
+}
+
+
+/* ================================= */
+/* RESPONSIVE HP */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+
+    /* HEADER */
+
+    .header-kuliner {
+        padding: 55px 18px 40px;
+    }
+
+    .header-kuliner h1 {
+        font-size: 30px;
+    }
+
+    .header-kuliner p {
+        font-size: 13px;
+    }
+
+
+    /* CONTAINER */
+
+    .container {
+        padding: 40px 5%;
+    }
+
+    .container > h2 {
+        font-size: 24px;
+    }
+
+
+    /* KULINER PILIHAN */
+
+    .kuliner-pilihan {
+        margin-bottom: 45px;
+    }
+
+    .pilihan-gambar img {
+        height: 230px;
+    }
+
+    .pilihan-info {
+        padding: 23px;
+    }
+
+    .pilihan-info h2 {
+        font-size: 27px;
+    }
+
+    .pilihan-info p {
+        font-size: 13px;
+    }
+
+
+    /* PENCARIAN */
+
+    .pencarian {
+        padding: 10px 0 30px;
+    }
+
+    .pencarian input {
+        padding: 13px 16px;
+    }
+
+
+    /* FILTER */
+
+    .filter-kuliner {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 9px 15px;
+        font-size: 12px;
+    }
+
+
+    /* DAFTAR KULINER */
+
+    .daftar-kuliner {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 0 0 40px;
+    }
+
+    .kuliner-card img {
+        height: 220px;
+    }
+
+    .isi-card {
+        padding: 20px;
+    }
+
+    .isi-card h3 {
+        font-size: 19px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 20px 12px;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+}

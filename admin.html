@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Admin - Jelajah Pati</title>
+
+    <!-- CSS ADMIN -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <h2>Jelajah Pati</h2>
+                <p>Admin Dashboard</p>
+            </div>
+
+            <!-- MENU NAVIGASI -->
+            <nav class="sidebar-menu">
+
+                <a href="#" class="menu-item active" data-menu="dashboard">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="#" class="menu-item" data-menu="ulasan">
+                    <span>✎</span>
+                    Data Ulasan
+                </a>
+
+                <a href="#" class="menu-item" data-menu="pengguna">
+                    <span>♙</span>
+                    Data Pengguna
+                </a>
+
+            </nav>
+
+            <!-- LOGOUT -->
+            <div class="sidebar-bottom">
+                <button type="button" id="logoutBtn" class="logout-btn">
+                    ↪ Logout
+                </button>
+            </div>
+
+        </aside>
+
+
+        <!-- =================================
+             KONTEN UTAMA
+        ================================== -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+            <header class="topbar">
+
+                <div>
+                    <h1 id="judulHalaman">Dashboard</h1>
+
+                    <p>
+                        Selamat datang di halaman Admin Jelajah Pati.
+                    </p>
+                </div>
+
+                <!-- PROFIL ADMIN -->
+                <div class="admin-profile">
+
+                    <div class="admin-avatar">A</div>
+
+                    <div>
+                        <strong>Administrator</strong>
+                        <small id="adminEmail">Memuat akun...</small>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PESAN ADMIN -->
+            <p id="pesanAdmin"></p>
+
+
+            <!-- =================================
+                 HALAMAN DASHBOARD
+            ================================== -->
+
+            <section id="halamanDashboard" class="content-section">
+
+                <!-- SAMBUTAN -->
+                <div class="welcome-box">
+
+                    <h2>Selamat Datang, Admin!</h2>
+
+                    <p>
+                        Kelola ulasan dan lihat data pengguna
+                        website Jelajah Pati melalui halaman ini.
+                    </p>
+
+                </div>
+
+
+                <!-- STATISTIK -->
+                <div class="statistik-container">
+
+                    <!-- TOTAL PENGGUNA -->
+                    <div class="statistik-card">
+
+                        <div class="statistik-icon">♙</div>
+
+                        <div>
+                            <p>Total Pengguna</p>
+                            <h2 id="totalPengguna">0</h2>
+                        </div>
+
+                    </div>
+
+
+                    <!-- TOTAL ULASAN -->
+                    <div class="statistik-card">
+
+                        <div class="statistik-icon">✎</div>
+
+                        <div>
+                            <p>Total Ulasan</p>
+                            <h2 id="totalUlasan">0</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     AKSES CEPAT
+                ================================== -->
+
+                <div class="akses-cepat">
+
+                    <div class="section-header">
+                        <h3>Akses Cepat</h3>
+
+                        <p>
+                            Pilih halaman yang ingin kamu kelola.
+                        </p>
+                    </div>
+
+                    <div class="akses-container">
+
+                        <!-- AKSES DATA ULASAN -->
+                        <div class="akses-card akses-lavender">
+
+                            <div class="akses-icon">✎</div>
+
+                            <div class="akses-detail">
+                                <h4>Data Ulasan</h4>
+
+                                <p>
+                                    Lihat dan kelola ulasan
+                                    yang diberikan pengguna.
+                                </p>
+
+                                <button
+                                    type="button"
+                                    id="aksesUlasan"
+                                    class="akses-btn">
+                                    Lihat Ulasan →
+                                </button>
+                            </div>
+
+                        </div>
+
+
+                        <!-- AKSES DATA PENGGUNA -->
+                        <div class="akses-card akses-sage">
+
+                            <div class="akses-icon">♙</div>
+
+                            <div class="akses-detail">
+                                <h4>Data Pengguna</h4>
+
+                                <p>
+                                    Lihat daftar akun pengguna
+                                    yang telah terdaftar.
+                                </p>
+
+                                <button
+                                    type="button"
+                                    id="aksesPengguna"
+                                    class="akses-btn">
+                                    Lihat Pengguna →
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     AKTIVITAS TERBARU
+                ================================== -->
+
+                <div class="aktivitas-box">
+
+                    <div class="section-header">
+                        <h3>Aktivitas Terbaru</h3>
+
+                        <p>
+                            Lima ulasan terbaru dari pengguna
+                            website Jelajah Pati.
+                        </p>
+                    </div>
+
+                    <div
+                        id="aktivitasTerbaru"
+                        class="aktivitas-list">
+
+                        <p class="aktivitas-kosong">
+                            Memuat aktivitas terbaru...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     INFORMASI WEBSITE
+                ================================== -->
+
+                <div class="info-box">
+
+                    <h3>Informasi Website</h3>
+
+                    <p>
+                        Jelajah Pati merupakan website informasi
+                        yang dikembangkan untuk memperkenalkan
+                        berbagai potensi Kabupaten Pati, meliputi
+                        wisata, kuliner, budaya, dan tempat nongkrong.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 HALAMAN DATA ULASAN
+            ================================== -->
+
+            <section
+                id="halamanUlasan"
+                class="content-section"
+                hidden>
+
+                <div class="section-header">
+
+                    <h2>Data Ulasan</h2>
+
+                    <p>
+                        Daftar ulasan yang diberikan oleh pengguna
+                        website Jelajah Pati.
+                    </p>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nama Pengguna</th>
+                                <th>Objek</th>
+                                <th>Rating</th>
+                                <th>Komentar</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabelUlasan">
+
+                            <tr>
+                                <td colspan="6">
+                                    Memuat data ulasan...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 HALAMAN DATA PENGGUNA
+            ================================== -->
+
+            <section
+                id="halamanPengguna"
+                class="content-section"
+                hidden>
+
+                <div class="section-header">
+
+                    <h2>Data Pengguna</h2>
+
+                    <p>
+                        Daftar akun pengguna yang telah terdaftar
+                        pada website Jelajah Pati.
+                    </p>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nama</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabelPengguna">
+
+                            <tr>
+                                <td colspan="4">
+                                    Memuat data pengguna...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =================================
+         JAVASCRIPT ADMIN
+    ================================== -->
+
+    <script type="module" src="admin.js"></script>
+
+</body>
+</html>

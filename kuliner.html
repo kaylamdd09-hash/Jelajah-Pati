@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner Pati - Jelajah Pati</title>
+    <link rel="stylesheet" href="kuliner.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Jelajah Pati</div>
+
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="wisata.html">Wisata</a>
+            <a href="kuliner.html" class="aktif">Kuliner</a>
+            <a href="budaya.html">Budaya</a>
+            <a href="tempatnongkrong.html">Tempat Nongkrong</a>
+        </div>
+    </nav>
+
+
+    <!-- HEADER -->
+    <header class="header-kuliner">
+        <span class="eyebrow">JELAJAHI KELEZATAN PATI</span>
+
+        <h1>Ragam Kuliner Pati</h1>
+
+        <p>
+            Temukan beragam makanan khas, jajanan,
+            dan oleh-oleh yang menjadi bagian dari
+            kekayaan kuliner Kabupaten Pati.
+        </p>
+    </header>
+
+
+    <!-- DAFTAR KULINER -->
+    <main class="container">
+
+        <!-- KULINER PILIHAN -->
+        <section class="kuliner-pilihan">
+
+            <div class="pilihan-gambar">
+                <img src="images/nasi-gandul.jpg" alt="Nasi Gandul khas Pati">
+
+                <span class="label-pilihan">
+                    ✨ Kuliner Unggulan Pati
+                </span>
+            </div>
+
+            <div class="pilihan-info">
+
+                <span class="subjudul-pilihan">
+                    KULINER PILIHAN HARI INI
+                </span>
+
+                <h2>Nasi Gandul</h2>
+
+                <p>
+                    Pernah mencoba kuliner khas Pati yang satu ini?
+                    Nasi Gandul merupakan hidangan nasi dengan kuah
+                    gurih berbumbu rempah dan irisan daging sapi.
+                    Perpaduan rasa gurih dan aroma rempah menjadikannya
+                    salah satu makanan yang wajib dikenal saat
+                    berkunjung ke Kabupaten Pati.
+                </p>
+
+                <div class="pilihan-tag">
+                    <span>🍛 Makanan Khas</span>
+                    <span>📍 Pati, Jawa Tengah</span>
+                </div>
+
+                <a href="detail-kuliner.html?nama=Nasi%20Gandul"
+                   class="tombol-pilihan">
+                    Kenali Lebih Jauh →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- JUDUL DAFTAR -->
+        <h2>Jelajahi Kuliner</h2>
+
+        <p class="deskripsi">
+            Temukan berbagai pilihan kuliner yang bisa kamu kenali
+            lebih jauh melalui Jelajah Pati.
+        </p>
+
+
+        <!-- PENCARIAN -->
+        <div class="pencarian">
+            <input
+                type="text"
+                id="cariKuliner"
+                placeholder="Cari nama kuliner..."
+            >
+        </div>
+
+
+        <!-- FILTER KATEGORI -->
+        <div class="filter-kuliner">
+
+            <button class="filter-btn aktif" data-kategori="semua">
+                Semua
+            </button>
+
+            <button class="filter-btn" data-kategori="makanan">
+                Makanan Berat
+            </button>
+
+            <button class="filter-btn" data-kategori="jajanan">
+                Jajanan
+            </button>
+
+            <button class="filter-btn" data-kategori="oleh-oleh">
+                Oleh-oleh
+            </button>
+
+        </div>
+
+
+        <!-- KARTU KULINER -->
+        <div class="daftar-kuliner">
+
+
+            <!-- MAKANAN BERAT -->
+
+            <div class="kuliner-card" data-kategori="makanan">
+                <img src="images/nasi-gandul.jpg" alt="Nasi Gandul">
+
+                <div class="isi-card">
+                    <span class="kategori">Makanan Berat</span>
+                    <h3>Nasi Gandul</h3>
+                    <p class="lokasi">📍 Pati, Jawa Tengah</p>
+                    <p>Nasi dengan kuah gurih berbumbu rempah dan irisan daging sapi.</p>
+
+                    <a href="detail-kuliner.html?nama=Nasi%20Gandul" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="makanan">
+                <img src="images/soto-kemiri.jpg" alt="Soto Kemiri">
+
+                <div class="isi-card">
+                    <span class="kategori">Makanan Berat</span>
+                    <h3>Soto Kemiri</h3>
+                    <p class="lokasi">📍 Desa Kemiri, Pati</p>
+                    <p>Soto ayam dengan kuah berbumbu kemiri yang memiliki cita rasa khas.</p>
+
+                    <a href="detail-kuliner.html?nama=Soto%20Kemiri" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="makanan">
+                <img src="images/sego-tewel.jpg" alt="Sego Tewel">
+
+                <div class="isi-card">
+                    <span class="kategori">Makanan Berat</span>
+                    <h3>Sego Tewel</h3>
+                    <p class="lokasi">📍 Tambakromo, Pati</p>
+                    <p>Nasi dengan sayur nangka muda yang dimasak menggunakan bumbu khas.</p>
+
+                    <a href="detail-kuliner.html?nama=Sego%20Tewel" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="makanan">
+                <img src="images/petis-kambing.jpg" alt="Petis Kambing Runting">
+
+                <div class="isi-card">
+                    <span class="kategori">Makanan Berat</span>
+                    <h3>Petis Kambing Runting</h3>
+                    <p class="lokasi">📍 Runting, Pati</p>
+                    <p>Olahan daging kambing dengan kuah kental dan bumbu rempah.</p>
+
+                    <a href="detail-kuliner.html?nama=Petis%20Kambing%20Runting" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="makanan">
+                <img src="images/mangut-ndas-manyung.jpg" alt="Mangut Ndas Manyung">
+
+                <div class="isi-card">
+                    <span class="kategori">Makanan Berat</span>
+                    <h3>Mangut Ndas Manyung</h3>
+                    <p class="lokasi">📍 Wilayah pesisir Pati</p>
+                    <p>Olahan kepala ikan manyung dengan kuah santan bercita rasa pedas.</p>
+
+                    <a href="detail-kuliner.html?nama=Mangut%20Ndas%20Manyung" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="makanan">
+                <img src="images/lontong-balungan.jpg" alt="Lontong Balungan">
+
+                <div class="isi-card">
+                    <span class="kategori">Makanan Berat</span>
+                    <h3>Lontong Balungan</h3>
+                    <p class="lokasi">📍 Desa Kropak, Pati</p>
+                    <p>Hidangan lontong dengan olahan balungan dan kuah berbumbu.</p>
+
+                    <a href="detail-kuliner.html?nama=Lontong%20Balungan" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="makanan">
+                <img src="images/kotokan-gereh-tongkol.jpg" alt="Kotokan Gereh Tongkol">
+
+                <div class="isi-card">
+                    <span class="kategori">Makanan Berat</span>
+                    <h3>Kotokan Gereh Tongkol</h3>
+                    <p class="lokasi">📍 Pati, Jawa Tengah</p>
+                    <p>Olahan ikan tongkol dengan kuah dan bumbu masakan tradisional.</p>
+
+                    <a href="detail-kuliner.html?nama=Kotokan%20Gereh%20Tongkol" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="makanan">
+                <img src="images/botok-masin.jpg" alt="Botok Masin">
+
+                <div class="isi-card">
+                    <span class="kategori">Makanan Berat</span>
+                    <h3>Botok Masin</h3>
+                    <p class="lokasi">📍 Pati, Jawa Tengah</p>
+                    <p>Olahan tradisional berbumbu yang dikenal dalam kuliner lokal Pati.</p>
+
+                    <a href="detail-kuliner.html?nama=Botok%20Masin" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- JAJANAN -->
+
+            <div class="kuliner-card" data-kategori="jajanan">
+                <img src="images/dumbeg.jpg" alt="Dumbeg">
+
+                <div class="isi-card">
+                    <span class="kategori">Jajanan</span>
+                    <h3>Dumbeg</h3>
+                    <p class="lokasi">📍 Pati, Jawa Tengah</p>
+                    <p>
+                        Jajanan tradisional berbahan tepung beras,
+                        santan, dan gula merah yang berasal dari Rembang
+                        serta dikenal oleh masyarakat Pati.
+                    </p>
+
+                    <a href="detail-kuliner.html?nama=Dumbeg" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="jajanan">
+                <img src="images/gethuk-runting.jpg" alt="Gethuk Runting">
+
+                <div class="isi-card">
+                    <span class="kategori">Jajanan</span>
+                    <h3>Gethuk Runting</h3>
+                    <p class="lokasi">📍 Runting, Pati</p>
+                    <p>Jajanan tradisional yang dibuat dari bahan dasar singkong.</p>
+
+                    <a href="detail-kuliner.html?nama=Gethuk%20Runting" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="jajanan">
+                <img src="images/jenang-landoh.png" alt="Jenang Landoh">
+
+                <div class="isi-card">
+                    <span class="kategori">Jajanan</span>
+                    <h3>Jenang Landoh</h3>
+                    <p class="lokasi">📍 Landoh, Pati</p>
+                    <p>Jajanan manis tradisional yang dikenal dari daerah Landoh.</p>
+
+                    <a href="detail-kuliner.html?nama=Jenang%20Landoh" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="jajanan">
+                <img src="images/tape-gembong.jpg" alt="Tape Gembong">
+
+                <div class="isi-card">
+                    <span class="kategori">Jajanan</span>
+                    <h3>Tape Gembong</h3>
+                    <p class="lokasi">📍 Gembong, Pati</p>
+                    <p>Olahan singkong hasil fermentasi yang dikenal dari daerah Gembong.</p>
+
+                    <a href="detail-kuliner.html?nama=Tape%20Gembong" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="jajanan">
+                <img src="images/kue-moho.jpg" alt="Kue Moho">
+
+                <div class="isi-card">
+                    <span class="kategori">Jajanan</span>
+                    <h3>Kue Moho</h3>
+                    <p class="lokasi">📍 Pati, Jawa Tengah</p>
+                    <p>
+                        Kue moho yang mekar merekah dengan tekstur lembut
+                        dan rasa manis yang pas, siap menghadirkan
+                        kehangatan tradisi di setiap gigitan.
+                    </p>
+
+                    <a href="detail-kuliner.html?nama=Kue%20Moho" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- OLEH-OLEH -->
+
+            <div class="kuliner-card" data-kategori="oleh-oleh">
+                <img src="images/bandeng-presto.jpg" alt="Bandeng Presto Juwana">
+
+                <div class="isi-card">
+                    <span class="kategori">Oleh-oleh</span>
+                    <h3>Bandeng Presto Juwana</h3>
+                    <p class="lokasi">📍 Juwana, Pati</p>
+                    <p>Olahan ikan bandeng yang dimasak dengan teknik presto hingga durinya lunak.</p>
+
+                    <a href="detail-kuliner.html?nama=Bandeng%20Presto%20Juwana" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="oleh-oleh">
+                <img src="images/otak-otak-bandeng.jpg" alt="Otak-otak Bandeng">
+
+                <div class="isi-card">
+                    <span class="kategori">Oleh-oleh</span>
+                    <h3>Otak-otak Bandeng</h3>
+                    <p class="lokasi">📍 Juwana, Pati</p>
+                    <p>Olahan ikan bandeng yang dicampur dengan bumbu pilihan.</p>
+
+                    <a href="detail-kuliner.html?nama=Otak-otak%20Bandeng" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="oleh-oleh">
+                <img src="images/telur-lurik.jpg" alt="Telur Lurik">
+
+                <div class="isi-card">
+                    <span class="kategori">Oleh-oleh</span>
+                    <h3>Telur Lurik</h3>
+                    <p class="lokasi">📍 Batangan, Pati</p>
+                    <p>Telur lurik adalah varian produk telur ayam yang memiliki pola cangkang unik menyerupai motif kain lurik tradisional.</p>
+
+                    <a href="detail-kuliner.html?nama=Telur%20Lurik" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="oleh-oleh">
+                <img src="images/kerupuk-daging.jpg" alt="Kerupuk Daging">
+
+                <div class="isi-card">
+                    <span class="kategori">Oleh-oleh</span>
+                    <h3>Kerupuk Daging</h3>
+                    <p class="lokasi">📍 Kabupaten Pati</p>
+                    <p>Kerupuk berbahan olahan daging yang dapat dijadikan buah tangan.</p>
+
+                    <a href="detail-kuliner.html?nama=Kerupuk%20Daging" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="kuliner-card" data-kategori="oleh-oleh">
+                <img src="images/jeruk-pamelo.jpg" alt="Jeruk Pamelo Gembong">
+
+                <div class="isi-card">
+                    <span class="kategori">Oleh-oleh</span>
+                    <h3>Jeruk Pamelo Gembong</h3>
+                    <p class="lokasi">📍 Gembong, Pati</p>
+                    <p>Buah jeruk berukuran besar yang dikenal sebagai produk pertanian Gembong.</p>
+
+                    <a href="detail-kuliner.html?nama=Jeruk%20Pamelo%20Gembong" class="tombol-detail">
+                        Lihat Detail →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- PESAN KOSONG -->
+        <p id="pesanKosong" class="pesan-kosong">
+            Kuliner tidak ditemukan.
+        </p>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Jelajah Pati | Mengenal Keindahan dan Kekayaan Pati</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="kuliner.js"></script>
+
+</body>
+</html>

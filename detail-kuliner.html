@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Kuliner | Jelajah Pati</title>
+    <link rel="stylesheet" href="detail-kuliner.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Jelajah Pati</a>
+
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="wisata.html">Wisata</a>
+            <a href="kuliner.html" class="aktif">Kuliner</a>
+            <a href="budaya.html">Budaya</a>
+            <a href="tempatnongkrong.html">Tempat Nongkrong</a>
+        </div>
+
+        <div id="areaProfil">
+            <a href="login.html" class="btn-login-nav">Login</a>
+        </div>
+    </nav>
+
+    <!-- TOMBOL KEMBALI -->
+    <div class="navigasi-detail">
+        <a href="kuliner.html" class="tombol-kembali">
+            ← Kembali ke Jelajah Kuliner
+        </a>
+    </div>
+
+    <!-- HERO DETAIL KULINER -->
+    <section class="hero-detail">
+        <div class="hero-teks">
+            <span class="label-atas">MENGENAL KULINER NUSANTARA</span>
+
+            <span class="kategori-detail" id="detailKategori">
+                Kategori Kuliner
+            </span>
+
+            <h1 id="detailNama">Nama Kuliner</h1>
+
+            <p class="lokasi-detail" id="detailLokasi">
+                📍 Pati, Jawa Tengah
+            </p>
+
+            <p class="deskripsi-utama" id="detailDeskripsi">
+                Deskripsi kuliner akan ditampilkan di sini.
+            </p>
+
+            <div class="hiasan-garis">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="hero-gambar">
+            <div class="lingkaran-hiasan"></div>
+
+            <img
+                src="images/nasi-gandul.jpg"
+                alt="Foto kuliner"
+                id="detailGambar"
+            >
+
+            <div class="label-gambar">Cita Rasa Khas Pati</div>
+        </div>
+    </section>
+
+    <!-- KONTEN DETAIL -->
+    <main class="detail-container">
+
+        <!-- CERITA KULINER -->
+        <section class="tentang-kuliner">
+            <div class="judul-bagian">
+                <span class="nomor-bagian">01 / CERITA KULINER</span>
+                <h2>Mengenal Lebih Dekat</h2>
+                <p>
+                    Setiap kuliner memiliki cerita dan ciri khas tersendiri.
+                    Yuk, kenali lebih jauh kekayaan rasa dari Kabupaten Pati.
+                </p>
+            </div>
+
+            <div class="cerita-kuliner">
+                <div class="cerita-ornamen">
+                    <span>RASA</span>
+                    <span>TRADISI</span>
+                    <span>BUDAYA</span>
+                </div>
+
+                <p id="detailCerita">
+                    Informasi cerita kuliner akan ditampilkan di sini.
+                </p>
+            </div>
+        </section>
+
+        <!-- INFORMASI KULINER -->
+        <section class="informasi-kuliner">
+            <div class="judul-bagian">
+                <span class="nomor-bagian">02 / INFORMASI</span>
+                <h2>Kenali Ciri Khasnya</h2>
+                <p>
+                    Beberapa hal menarik yang membuat kuliner ini
+                    memiliki karakter tersendiri.
+                </p>
+            </div>
+
+            <div class="grid-informasi">
+                <div class="info-card">
+                    <div class="ikon-info">🥘</div>
+                    <div>
+                        <h3>Bahan Utama</h3>
+                        <p id="detailBahan">Informasi bahan utama.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="ikon-info">😋</div>
+                    <div>
+                        <h3>Cita Rasa</h3>
+                        <p id="detailRasa">Informasi cita rasa.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="ikon-info">✨</div>
+                    <div>
+                        <h3>Keunikan</h3>
+                        <p id="detailUnik">Informasi keunikan.</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="ikon-info">📍</div>
+                    <div>
+                        <h3>Asal Daerah</h3>
+                        <p id="detailAsal">Informasi asal daerah.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAKTA MENARIK -->
+        <section class="fakta-kuliner">
+            <div class="fakta-ornamen">✦</div>
+            <span class="nomor-bagian">03 / TAHUKAH KAMU?</span>
+            <h2>Fakta Menarik</h2>
+            <p id="detailFakta">
+                Temukan informasi menarik tentang kuliner ini.
+            </p>
+        </section>
+
+        <!-- REVIEW KULINER -->
+        <section class="review-section" id="bagianReview">
+            <div class="judul-bagian">
+                <span class="nomor-bagian">04 / ULASAN PENGUNJUNG</span>
+                <h2>Review Kuliner</h2>
+                <p>
+                    Bagikan pengalamanmu atau baca pendapat pengunjung
+                    lainnya tentang kuliner ini.
+                </p>
+            </div>
+
+            <!-- PESAN JIKA BELUM LOGIN -->
+            <div id="belumLogin" class="pesan-login">
+                <p>
+                    Ingin memberikan review?
+                    Silakan login terlebih dahulu.
+                </p>
+                <a href="login.html" class="btn-login-review">
+                    Login untuk Review
+                </a>
+            </div>
+
+            <!-- FORM REVIEW -->
+            <form id="formReview" class="form-review" hidden>
+                <h3>Tulis Pengalamanmu</h3>
+
+                <p class="label-rating">Berikan Rating</p>
+
+                <div class="pilihan-rating">
+                    <label>
+                        <input type="radio" name="rating" value="1" required>
+                        <span>★</span> 1
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="2">
+                        <span>★</span> 2
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="3">
+                        <span>★</span> 3
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="4">
+                        <span>★</span> 4
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="5">
+                        <span>★</span> 5
+                    </label>
+                </div>
+
+                <label for="komentarReview" class="label-komentar">
+                    Tulis Review
+                </label>
+
+                <textarea
+                    id="komentarReview"
+                    placeholder="Bagaimana pengalamanmu dengan kuliner ini?"
+                    rows="4"
+                    maxlength="1000"
+                    required
+                ></textarea>
+
+                <p id="pesanReview" class="pesan-review"></p>
+
+                <button type="submit" id="tombolKirimReview">
+                    Kirim Review
+                </button>
+            </form>
+
+            <!-- DAFTAR REVIEW -->
+            <div class="daftar-review">
+                <h3>Ulasan Pengunjung</h3>
+                <div id="daftarReview">
+                    <p class="review-kosong">Memuat review...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KULINER LAINNYA -->
+        <section class="kuliner-lainnya">
+            <div class="judul-bagian">
+                <span class="nomor-bagian">05 / JELAJAHI LAGI</span>
+                <h2>Masih Banyak Rasa untuk Dijelajahi!</h2>
+                <p>
+                    Temukan kuliner khas Pati lainnya dan kenali
+                    keunikan setiap hidangannya.
+                </p>
+            </div>
+
+            <a href="kuliner.html" class="tombol-jelajah">
+                Jelajahi Kuliner Lainnya →
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            © 2026 Jelajah Pati |
+            Mengenal Keindahan dan Kekayaan Pati
+        </p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="detail-kuliner.js"></script>
+
+</body>
+</html>

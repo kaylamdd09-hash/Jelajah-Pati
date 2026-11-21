@@ -1,0 +1,753 @@
+
+/* =========================================
+   1. TAMPILAN DASAR
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #fffafd;
+    color: #76566c;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   2. NAVBAR
+========================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 7%;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(118, 86, 108, 0.07);
+}
+
+.logo {
+    text-decoration: none;
+    color: #76566c;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #d47d9d;
+}
+
+.menu,
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.menu a,
+.nav-menu a {
+    text-decoration: none;
+    color: #816e7d;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+.menu a::after,
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #d47d9d;
+    bottom: -7px;
+    left: 0;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.menu a:hover,
+.nav-menu a:hover,
+.menu a.aktif,
+.nav-menu a.active {
+    color: #d47d9d;
+}
+
+.menu a:hover::after,
+.nav-menu a:hover::after,
+.menu a.aktif::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   3. JUDUL HALAMAN
+========================================= */
+
+.judul {
+    text-align: center;
+    padding: 75px 20px 45px;
+    background:
+        radial-gradient(circle at 12% 30%,
+        rgba(248, 220, 229, 0.8) 0 70px,
+        transparent 71px),
+        radial-gradient(circle at 88% 60%,
+        rgba(217, 235, 217, 0.8) 0 90px,
+        transparent 91px),
+        linear-gradient(120deg, #fff3d9, #fffafd, #f8dce5);
+    position: relative;
+    overflow: hidden;
+}
+
+.judul::before {
+    content: "✿";
+    position: absolute;
+    top: 25px;
+    left: 13%;
+    color: rgba(212, 125, 157, 0.35);
+    font-size: 40px;
+    transform: rotate(-20deg);
+}
+
+.judul::after {
+    content: "✦";
+    position: absolute;
+    bottom: 20px;
+    right: 15%;
+    color: #d4b77e;
+    font-size: 35px;
+}
+
+.subjudul {
+    color: #d47d9d;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+}
+
+.judul h1 {
+    font-size: 42px;
+    color: #76566c;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.judul p {
+    line-height: 1.8;
+    color: #816e7d;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   4. PENCARIAN
+========================================= */
+
+.pencarian {
+    display: flex;
+    justify-content: center;
+    padding: 25px 20px 40px;
+    background: #fffafd;
+}
+
+.pencarian input {
+    width: 100%;
+    max-width: 520px;
+    padding: 16px 23px;
+    border: 1px solid #f0dce5;
+    border-radius: 30px;
+    outline: none;
+    font-size: 13px;
+    background: white;
+    color: #76566c;
+    box-shadow: 0 5px 18px rgba(118, 86, 108, 0.06);
+    transition: 0.3s;
+}
+
+.pencarian input::placeholder {
+    color: #b5a2ae;
+}
+
+.pencarian input:focus {
+    border-color: #d47d9d;
+    box-shadow: 0 0 0 4px rgba(212, 125, 157, 0.12);
+}
+
+
+/* =========================================
+   5. HERO WISATA
+========================================= */
+
+.hero-wisata {
+    min-height: 490px;
+    margin: 25px 6% 75px;
+    border-radius: 35px 12px 35px 12px;
+    overflow: hidden;
+    position: relative;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(48, 77, 61, 0.82),
+            rgba(48, 77, 61, 0.30)
+        ),
+        url("images/alunalun-pati.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0 15px 35px rgba(118, 86, 108, 0.13);
+}
+
+/* Ornamen lingkaran */
+
+.hero-wisata::before {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border: 2px dashed rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    right: -80px;
+    top: -100px;
+}
+
+.hero-wisata::after {
+    content: "✿";
+    position: absolute;
+    right: 9%;
+    bottom: 25px;
+    font-size: 100px;
+    color: rgba(255, 255, 255, 0.25);
+    transform: rotate(20deg);
+}
+
+.hero-content {
+    max-width: 650px;
+    padding: 65px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #76566c;
+    background: #f8dce5;
+    padding: 10px 17px;
+    border-radius: 30px;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    max-width: 560px;
+}
+
+.hero-content p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+    color: #fffaf4;
+    max-width: 510px;
+}
+
+.btn-jelajah {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    background: #d9ebd9;
+    color: #55745e;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.btn-jelajah:hover {
+    background: #f8dce5;
+    color: #76566c;
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   6. PENGANTAR WISATA
+========================================= */
+
+.pengantar-wisata {
+    text-align: center;
+    padding: 20px 8% 75px;
+    position: relative;
+}
+
+.pengantar-wisata .subjudul {
+    color: #86a991;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 13px;
+}
+
+.pengantar-wisata h2,
+.judul-daftar h2 {
+    font-size: 31px;
+    color: #76566c;
+    margin-bottom: 15px;
+}
+
+.pengantar-wisata > p:last-of-type {
+    max-width: 680px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #816e7d;
+}
+
+
+/* =========================================
+   7. HIGHLIGHT WISATA
+========================================= */
+
+.wisata-highlight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+    margin-top: 42px;
+}
+
+.highlight-item {
+    padding: 32px 24px;
+    background: #f8dce5;
+    border: 1px solid #f0d0dd;
+    border-radius: 25px 10px 25px 10px;
+    transition: 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-item:nth-child(2) {
+    background: #d9ebd9;
+    border-color: #cce2ce;
+}
+
+.highlight-item:nth-child(3) {
+    background: #dceaf8;
+    border-color: #cbdff1;
+}
+
+.highlight-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(118, 86, 108, 0.10);
+}
+
+.highlight-item::after {
+    content: "✦";
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: rgba(118, 86, 108, 0.12);
+    font-size: 40px;
+}
+
+.highlight-item span {
+    font-size: 35px;
+}
+
+.highlight-item h3 {
+    color: #76566c;
+    font-size: 17px;
+    margin: 15px 0 9px;
+}
+
+.highlight-item p {
+    color: #816e7d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   8. JUDUL DAFTAR WISATA
+========================================= */
+
+.judul-daftar {
+    padding: 35px 8% 15px;
+    position: relative;
+}
+
+.judul-daftar h2 {
+    margin-bottom: 10px;
+}
+
+.judul-daftar > div > p:last-child {
+    color: #816e7d;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   9. DAFTAR KARTU WISATA
+========================================= */
+
+.daftar-wisata {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    padding: 25px 8% 85px;
+}
+
+.wisata-card {
+    background-color: white;
+    border-radius: 25px 10px 25px 10px;
+    overflow: hidden;
+    border: 1px solid #f1e5eb;
+    box-shadow: 0 6px 22px rgba(118, 86, 108, 0.07);
+    transition: 0.35s ease;
+}
+
+.wisata-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(118, 86, 108, 0.13);
+}
+
+.wisata-card img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.wisata-card:hover img {
+    transform: scale(1.05);
+}
+
+.isi-card {
+    padding: 25px;
+}
+
+.kategori {
+    display: inline-block;
+    background-color: #d9ebd9;
+    color: #64866d;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* Variasi warna kategori */
+
+.wisata-card:nth-child(2n) .kategori {
+    background: #f8dce5;
+    color: #b56e89;
+}
+
+.wisata-card:nth-child(3n) .kategori {
+    background: #fff3d9;
+    color: #ad8950;
+}
+
+.isi-card h3 {
+    color: #76566c;
+    margin: 15px 0 9px;
+    font-size: 21px;
+}
+
+.isi-card p {
+    color: #816e7d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.isi-card .lokasi {
+    margin-bottom: 12px;
+    color: #c18a58;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   10. TOMBOL DETAIL
+========================================= */
+
+.btn-detail {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 21px;
+    background: #86a991;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    background: #d47d9d;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(212, 125, 157, 0.2);
+}
+
+
+/* =========================================
+   11. FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    background: #f6dce7;
+    color: #76566c;
+    padding: 30px 20px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   12. RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-wisata {
+        min-height: 420px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .hero-content {
+        padding: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .daftar-wisata {
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 20px;
+    }
+
+    .wisata-card img {
+        height: 230px;
+    }
+
+}
+
+
+/* =========================================
+   13. RESPONSIVE HP
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 17px;
+        padding: 18px 5%;
+    }
+
+    .menu,
+    .nav-menu {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a,
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .judul {
+        padding: 55px 18px 40px;
+    }
+
+    .judul h1 {
+        font-size: 31px;
+    }
+
+    .judul p {
+        font-size: 12px;
+    }
+
+    .hero-wisata {
+        min-height: 390px;
+        margin: 20px 4% 50px;
+        border-radius: 25px 10px 25px 10px;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 28px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .hero-wisata::before {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pengantar-wisata {
+        padding: 15px 6% 50px;
+    }
+
+    .pengantar-wisata h2,
+    .judul-daftar h2 {
+        font-size: 25px;
+    }
+
+    .pengantar-wisata > p:last-of-type {
+        font-size: 13px;
+    }
+
+    .wisata-highlight {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .highlight-item {
+        padding: 25px 22px;
+    }
+
+    .judul-daftar {
+        padding: 20px 6% 10px;
+    }
+
+    .daftar-wisata {
+        grid-template-columns: 1fr;
+        padding: 20px 6% 60px;
+        gap: 22px;
+    }
+
+    .wisata-card img {
+        height: 240px;
+    }
+
+    .isi-card {
+        padding: 21px;
+    }
+
+    .isi-card h3 {
+        font-size: 19px;
+    }
+
+}
+
+/* MENU NAVBAR AKTIF */
+.menu a.active {
+    color: #D47D9D;
+    position: relative;
+}
+
+.menu a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 2px;
+   background: #D47D9D;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   14. FILTER KATEGORI WISATA
+========================================= */
+
+.filter-kategori {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 20px 35px;
+    background: #fffafd;
+}
+
+.btn-filter-kategori {
+    padding: 12px 21px;
+    border: 1px solid #e8dce4;
+    border-radius: 30px;
+    background: white;
+    color: #816e7d;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-filter-kategori:hover {
+    background: #f8dce5;
+    color: #b56e89;
+    border-color: #f0d0dd;
+    transform: translateY(-3px);
+}
+
+.btn-filter-kategori.active {
+    background: #86a991;
+    color: white;
+    border-color: #86a991;
+    box-shadow: 0 5px 12px rgba(134, 169, 145, 0.2);
+}
+
+
+/* RESPONSIVE FILTER KATEGORI */
+
+@media (max-width: 650px) {
+
+    .filter-kategori {
+        gap: 9px;
+        padding: 0 15px 25px;
+    }
+
+    .btn-filter-kategori {
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+}

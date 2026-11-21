@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Budaya - Jelajah Pati</title>
+    <link rel="stylesheet" href="budaya.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">Jelajah Pati.</a>
+
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="wisata.html">Wisata</a>
+            <a href="kuliner.html">Kuliner</a>
+            <a href="budaya.html" class="aktif">Budaya</a>
+            <a href="tempatnongkrong.html">Tempat Nongkrong</a>
+        </div>
+    </nav>
+
+
+    <!-- HEADER -->
+    <header class="judul">
+        <div class="subjudul">KENALI WARISAN BUDAYA DAERAH</div>
+
+        <h1>Jelajah Budaya Pati</h1>
+
+        <p>
+            Mengenal beragam tradisi, kesenian, kerajinan,
+            dan warisan budaya yang menjadi bagian dari
+            identitas Kabupaten Pati.
+        </p>
+    </header>
+
+
+    <!-- PENCARIAN -->
+    <section class="pencarian">
+        <input
+            type="text"
+            id="cariBudaya"
+            placeholder="Cari budaya yang ingin kamu ketahui..."
+        >
+    </section>
+
+
+    <!-- FILTER KATEGORI -->
+    <section class="filter-budaya">
+
+        <button class="filter-btn aktif" data-filter="semua">
+            Semua
+        </button>
+
+        <button class="filter-btn" data-filter="tradisi">
+            Tradisi
+        </button>
+
+        <button class="filter-btn" data-filter="kesenian">
+            Kesenian
+        </button>
+
+        <button class="filter-btn" data-filter="kerajinan">
+            Kerajinan
+        </button>
+
+    </section>
+
+
+    <!-- DAFTAR BUDAYA -->
+    <main class="daftar-budaya">
+
+
+        <!-- 1. BATIK BAKARAN -->
+        <article class="budaya-card" data-kategori="kerajinan">
+
+            <img src="images/batik-bakaran.jpg"
+                 alt="Batik Bakaran">
+
+            <div class="isi-card">
+
+                <span class="kategori">Kerajinan</span>
+
+                <h3>Batik Bakaran</h3>
+
+                <p class="lokasi">
+                    📍 Desa Bakaran, Kecamatan Juwana
+                </p>
+
+                <p>
+                    Batik khas Pati yang dikenal dengan teknik
+                    batik tulis dan motif remekan. Kerajinan ini
+                    menjadi salah satu warisan budaya yang
+                    mencerminkan identitas masyarakat Bakaran.
+                </p>
+
+                <a href="detail-budaya.html?nama=Batik%20Bakaran"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- 2. TRADISI MERON -->
+        <article class="budaya-card" data-kategori="tradisi">
+
+            <img src="images/tradisi-meron.jpg"
+                 alt="Tradisi Meron">
+
+            <div class="isi-card">
+
+                <span class="kategori">Tradisi</span>
+
+                <h3>Tradisi Meron</h3>
+
+                <p class="lokasi">
+                    📍 Kecamatan Sukolilo
+                </p>
+
+                <p>
+                    Tradisi tahunan masyarakat Sukolilo sebagai
+                    bentuk rasa syukur dan peringatan Maulid Nabi
+                    Muhammad SAW. Kegiatan ini dikenal dengan
+                    arak-arakan meron yang dihias dengan berbagai
+                    hasil bumi dan makanan.
+                </p>
+
+                <a href="detail-budaya.html?nama=Tradisi%20Meron"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- 3. WAYANG TOPENG KEDUNG PANJANG -->
+        <article class="budaya-card" data-kategori="kesenian">
+
+            <img src="images/wayang-topeng.jpg"
+                 alt="Wayang Topeng Kedung Panjang">
+
+            <div class="isi-card">
+
+                <span class="kategori">Kesenian</span>
+
+                <h3>Wayang Topeng Kedung Panjang</h3>
+
+                <p class="lokasi">
+                    📍 Desa Soneyan, Kecamatan Margoyoso
+                </p>
+
+                <p>
+                    Kesenian pertunjukan tradisional yang
+                    menggunakan topeng sebagai bagian dari
+                    penampilan. Kesenian ini menjadi salah satu
+                    bentuk kekayaan seni budaya masyarakat Pati.
+                </p>
+
+                <a href="detail-budaya.html?nama=Wayang%20Topeng%20Kedung%20Panjang"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- 4. KETOPRAK PATI -->
+        <article class="budaya-card" data-kategori="kesenian">
+
+            <img src="images/ketoprak-pati.jpg"
+                 alt="Pertunjukan Ketoprak">
+
+            <div class="isi-card">
+
+                <span class="kategori">Kesenian</span>
+
+                <h3>Ketoprak Pati</h3>
+
+                <p class="lokasi">
+                    📍 Kabupaten Pati
+                </p>
+
+                <p>
+                    Seni pertunjukan tradisional Jawa yang
+                    memadukan dialog, cerita, musik gamelan,
+                    dan akting para pemain. Ketoprak menjadi
+                    salah satu kesenian yang turut melestarikan
+                    cerita dan budaya masyarakat Jawa.
+                </p>
+
+                <a href="detail-budaya.html?nama=Ketoprak%20Pati"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- 5. GONG CIK -->
+        <article class="budaya-card" data-kategori="kesenian">
+
+            <img src="images/gong-cik.png"
+                 alt="Kesenian Gong Cik">
+
+            <div class="isi-card">
+
+                <span class="kategori">Kesenian</span>
+
+                <h3>Gong Cik</h3>
+
+                <p class="lokasi">
+                    📍 Desa Pasucen, Kecamatan Trangkil
+                </p>
+
+                <p>
+                    Salah satu kesenian tradisional yang menjadi
+                    bagian dari kekayaan budaya masyarakat Pati.
+                    Kesenian ini dikenal sebagai bentuk ekspresi
+                    seni dan tradisi yang masih dijaga oleh
+                    masyarakat setempat.
+                </p>
+
+                <a href="detail-budaya.html?nama=Gong%20Cik"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- 6. SEDEKAH BUMI -->
+        <article class="budaya-card" data-kategori="tradisi">
+
+            <img src="images/sedekah-bumi.jpg"
+                 alt="Tradisi Sedekah Bumi">
+
+            <div class="isi-card">
+
+                <span class="kategori">Tradisi</span>
+
+                <h3>Sedekah Bumi</h3>
+
+                <p class="lokasi">
+                    📍 Berbagai wilayah di Kabupaten Pati
+                </p>
+
+                <p>
+                    Tradisi masyarakat sebagai ungkapan rasa
+                    syukur atas hasil bumi dan rezeki yang
+                    diperoleh. Kegiatan ini juga menjadi
+                    kesempatan untuk mempererat kebersamaan
+                    dan menjaga hubungan antarwarga.
+                </p>
+
+                <a href="detail-budaya.html?nama=Sedekah%20Bumi"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- 7. SEDEKAH LAUT -->
+        <article class="budaya-card" data-kategori="tradisi">
+
+            <img src="images/sedekah-laut.jpeg"
+                 alt="Tradisi Sedekah Laut">
+
+            <div class="isi-card">
+
+                <span class="kategori">Tradisi</span>
+
+                <h3>Sedekah Laut</h3>
+
+                <p class="lokasi">
+                    📍 Wilayah pesisir Juwana dan Tayu
+                </p>
+
+                <p>
+                    Tradisi masyarakat pesisir sebagai bentuk
+                    rasa syukur atas hasil laut dan rezeki yang
+                    diperoleh para nelayan. Tradisi ini juga
+                    menjadi bagian dari upaya menjaga
+                    kebersamaan dan warisan budaya masyarakat
+                    pesisir.
+                </p>
+
+                <a href="detail-budaya.html?nama=Sedekah%20Laut"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- 8. TRADISI LAMPORAN -->
+        <article class="budaya-card" data-kategori="tradisi">
+
+            <img src="images/tradisi-lamporan.jpg"
+                 alt="Tradisi Lamporan">
+
+            <div class="isi-card">
+
+                <span class="kategori">Tradisi</span>
+
+                <h3>Tradisi Lamporan</h3>
+
+                <p class="lokasi">
+                    📍 Desa Soneyan dan Gunungsari, Kabupaten Pati
+                </p>
+
+                <p>
+                    Tradisi turun-temurun masyarakat Pati yang
+                    dilaksanakan sebagai doa untuk memohon
+                    keselamatan dan menolak berbagai marabahaya.
+                    Kegiatan ini dikenal dengan kirab obor yang
+                    mengelilingi desa serta diiringi kesenian tradisional.
+                </p>
+
+                <a href="detail-budaya.html?nama=Tradisi%20Lamporan"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+        <!-- 9. TARI PESANTENAN -->
+        <article class="budaya-card" data-kategori="kesenian">
+
+            <img src="images/tari-pesantenan.jpg"
+                 alt="Drama Tari Pesantenan">
+
+            <div class="isi-card">
+
+                <span class="kategori">Kesenian</span>
+
+                <h3>Tari Pesantenan</h3>
+
+                <p class="lokasi">
+                    📍 Kabupaten Pati
+                </p>
+
+                <p>
+                    Drama tari yang mengangkat kisah sejarah
+                    berdirinya Kadipaten Pati. Pertunjukan ini
+                    menggambarkan perjalanan dan cerita
+                    masyarakat pada masa awal terbentuknya
+                    wilayah Pati.
+                </p>
+
+                <a href="detail-budaya.html?nama=Tari%20Pesantenan"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+
+            </div>
+        </article>
+
+
+    </main>
+
+
+    <!-- PESAN JIKA BUDAYA TIDAK DITEMUKAN -->
+    <p class="pesan-kosong" id="pesanKosong">
+        Budaya yang kamu cari belum ditemukan.
+    </p>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Jelajah Pati. Mengenal Pati Lebih Dekat.</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="budaya.js"></script>
+
+</body>
+</html>

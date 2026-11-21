@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Akun - Jelajah Pati</title>
+
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+    <div class="register-container">
+
+        <div class="register-box">
+
+            <h1>Jelajah Pati</h1>
+            <p class="subtitle">Buat akun untuk mulai berbagi pengalamanmu!</p>
+
+            <form id="registerForm">
+
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Masukkan email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Minimal 6 karakter" required>
+
+                <label for="konfirmasiPassword">Konfirmasi Password</label>
+                <input type="password" id="konfirmasiPassword" placeholder="Ulangi password" required>
+
+                <button type="submit">Daftar Sekarang</button>
+
+                <p id="pesan"></p>
+
+            </form>
+
+            <p class="login-link">
+                Sudah punya akun?
+                <a href="login.html">Login di sini</a>
+            </p>
+
+            <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="js/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "project-jelajahkotapati",
+  "version": "1.0.0",
+  "description": "",
+  "main": "budaya.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "firebase-admin": "^14.5.1"
+  },
+  "allowScripts": {
+    "@firebase/util@1.15.3": true,
+    "protobufjs@7.6.6": true
+  }
+}

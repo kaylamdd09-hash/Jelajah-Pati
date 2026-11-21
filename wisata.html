@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Pati | Jelajah Pati</title>
+    <link rel="stylesheet" href="wisata.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Jelajah <span>Pati.</span></div>
+
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="wisata.html" class="active">Wisata</a>
+            <a href="kuliner.html">Kuliner</a>
+            <a href="budaya.html">Budaya</a>
+            <a href="tempatnongkrong.html">Tempat Nongkrong</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO / BANNER -->
+    <section class="hero-wisata">
+        <div class="hero-content">
+            <span class="hero-label">EXPLORE PATI</span>
+
+            <h1>Temukan Pesona<br>Kabupaten Pati</h1>
+
+            <p>
+                Dari keindahan alam hingga destinasi menarik,
+                ada banyak cerita dan tempat yang bisa kamu
+                temukan saat menjelajahi Pati.
+            </p>
+
+            <a href="#daftar-wisata" class="btn-jelajah">
+                Mulai Menjelajah <span>→</span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- PENGANTAR -->
+    <section class="pengantar-wisata">
+        <p class="subjudul">KENALI LEBIH DEKAT</p>
+
+        <h2>Jelajahi Keindahan Pati</h2>
+
+        <p>
+            Kabupaten Pati memiliki beragam destinasi menarik,
+            mulai dari wisata alam, kawasan pantai, hingga
+            agrowisata. Setiap tempat memiliki daya tarik
+            tersendiri yang layak untuk dikenal.
+        </p>
+
+        <div class="wisata-highlight">
+
+            <div class="highlight-item">
+                <span>🌿</span>
+                <h3>Wisata Alam</h3>
+                <p>Menikmati keindahan dan kesejukan alam.</p>
+            </div>
+
+            <div class="highlight-item">
+                <span>🌊</span>
+                <h3>Wisata Pantai</h3>
+                <p>Mengenal pesona kawasan pesisir Pati.</p>
+            </div>
+
+            <div class="highlight-item">
+                <span>🌱</span>
+                <h3>Agrowisata</h3>
+                <p>Menjelajahi wisata dengan nuansa alam.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- JUDUL DAFTAR WISATA -->
+    <section class="judul-daftar" id="daftar-wisata">
+        <div>
+            <p class="subjudul">DESTINASI PILIHAN</p>
+            <h2>Tempat Menarik di Pati</h2>
+            <p>Temukan destinasi yang ingin kamu jelajahi.</p>
+        </div>
+    </section>
+
+
+    <!-- PENCARIAN -->
+    <section class="pencarian">
+        <input
+            type="text"
+            id="cariWisata"
+            placeholder="Cari nama tempat wisata..."
+        >
+    </section>
+
+    <!-- FILTER KATEGORI WISATA -->
+<section class="filter-kategori">
+
+    <button class="btn-filter-kategori active"
+            data-kategori="semua">
+        Semua Wisata
+    </button>
+
+    <button class="btn-filter-kategori"
+            data-kategori="wisata alam">
+        🌿 Wisata Alam
+    </button>
+
+    <button class="btn-filter-kategori"
+            data-kategori="wisata pantai">
+        🌊 Wisata Pantai
+    </button>
+
+    <button class="btn-filter-kategori"
+            data-kategori="agrowisata">
+        🌱 Agrowisata
+    </button>
+
+</section>
+
+    <!-- DAFTAR WISATA -->
+    <section class="daftar-wisata">
+
+        <!-- WADUK GUNUNG ROWO -->
+        <div class="wisata-card">
+            <img src="images/waduk-gunungrowo.jpg"
+                 alt="Waduk Gunung Rowo">
+
+            <div class="isi-card">
+                <span class="kategori">Wisata Alam</span>
+                <h3>Waduk Gunung Rowo</h3>
+                <p class="lokasi">📍 Kabupaten Pati</p>
+
+                <p>
+                    Tempat wisata dengan suasana alam dan
+                    pemandangan waduk yang menarik.
+                </p>
+
+                <a href="detail-wisata.html?tempat=waduk-gunungrowo"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+        </div>
+
+
+        <!-- GUA PANCUR -->
+        <div class="wisata-card">
+            <img src="images/gua-pancur.jpg"
+                 alt="Gua Pancur">
+
+            <div class="isi-card">
+                <span class="kategori">Wisata Alam</span>
+                <h3>Gua Pancur</h3>
+                <p class="lokasi">📍 Kayen, Pati</p>
+
+                <p>
+                    Destinasi wisata alam yang menawarkan
+                    pengalaman menjelajahi kawasan gua.
+                </p>
+
+                <a href="detail-wisata.html?tempat=gua-pancur"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+        </div>
+
+
+        <!-- PANTAI BANYUTOWO -->
+        <div class="wisata-card">
+            <img src="images/pantai-banyutowo.jpeg"
+                 alt="Pantai Banyutowo">
+
+            <div class="isi-card">
+                <span class="kategori">Wisata Pantai</span>
+                <h3>Pantai Banyutowo</h3>
+                <p class="lokasi">📍 Dukuhseti, Pati</p>
+
+                <p>
+                    Salah satu destinasi pesisir yang bisa
+                    menjadi pilihan untuk menikmati suasana pantai.
+                </p>
+
+                <a href="detail-wisata.html?tempat=pantai-banyutowo"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+        </div>
+
+
+        <!-- HUTAN PINUS PANGONAN -->
+        <div class="wisata-card">
+            <img src="images/hutan-pinuspati.jpg"
+                 alt="Hutan Pinus Pangonan">
+
+            <div class="isi-card">
+                <span class="kategori">Wisata Alam</span>
+                <h3>Hutan Pinus Pangonan</h3>
+                <p class="lokasi">📍 Tlogowungu, Pati</p>
+
+                <p>
+                    Kawasan wisata alam dengan suasana
+                    pepohonan pinus yang sejuk.
+                </p>
+
+                <a href="detail-wisata.html?tempat=hutan-pinus-pangonan"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+        </div>
+
+
+        <!-- AGROWISATA JOLLONG -->
+        <div class="wisata-card">
+            <img src="images/wisata-agrojollong.jpg"
+                 alt="Agrowisata Jollong">
+
+            <div class="isi-card">
+                <span class="kategori">Agrowisata</span>
+                <h3>Agrowisata Jollong</h3>
+                <p class="lokasi">📍 Kabupaten Pati</p>
+
+                <p>
+                    Destinasi wisata bernuansa alam yang menawarkan
+                    pengalaman menikmati suasana agrowisata.
+                </p>
+
+                <a href="detail-wisata.html?tempat=agrowisata-jollong"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+        </div>
+
+
+        <!-- LOROTAN SEMAR -->
+        <div class="wisata-card">
+            <img src="images/lorotan-semar.jpg"
+                 alt="Lorotan Semar">
+
+            <div class="isi-card">
+                <span class="kategori">Wisata Alam</span>
+                <h3>Lorotan Semar</h3>
+                <p class="lokasi">📍 Kayen, Pati</p>
+
+                <p>
+                    Destinasi wisata alam berupa air terjun
+                    yang menawarkan suasana alami dan menyegarkan.
+                </p>
+
+                <a href="detail-wisata.html?tempat=lorotan-semar"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+        </div>
+
+
+        <!-- BUKIT PENGUSEN -->
+        <div class="wisata-card">
+            <img src="images/bukit-pengusen.jpg"
+                 alt="Bukit Pengusen">
+
+            <div class="isi-card">
+                <span class="kategori">Wisata Alam</span>
+                <h3>Bukit Pengusen</h3>
+                <p class="lokasi">📍 Gunungwungkal, Pati</p>
+
+                <p>
+                    Destinasi wisata perbukitan yang menawarkan
+                    pemandangan alam dan suasana yang sejuk.
+                </p>
+
+                <a href="detail-wisata.html?tempat=bukit-pengusen"
+                   class="btn-detail">
+                    Lihat Detail →
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- PESAN JIKA WISATA TIDAK DITEMUKAN -->
+    <p id="pesanKosong"
+       style="display: none; text-align: center; color: #777; padding: 20px 20px 50px;">
+        Wisata yang kamu cari belum ditemukan.
+    </p>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Jelajah Pati. Mengenal Pati Lebih Dekat.</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="wisata.js"></script>
+
+</body>
+</html>
