@@ -1,0 +1,774 @@
+
+/* =====================================
+   1. PENGATURAN DASAR
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f5ef;
+    color: #625b59;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   2. LAYOUT UTAMA
+===================================== */
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   3. SIDEBAR
+===================================== */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #fffefa;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0 18px rgba(80, 65, 55, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 0 12px;
+    margin-bottom: 40px;
+}
+
+.sidebar-header h2 {
+    color: #b87991;
+    font-size: 23px;
+    margin-bottom: 6px;
+}
+
+.sidebar-header p {
+    color: #aaa09a;
+    font-size: 13px;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 14px 15px;
+    text-decoration: none;
+    color: #827a76;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu-item span {
+    font-size: 20px;
+}
+
+.menu-item:hover {
+    background: #f8edf0;
+    color: #b87991;
+}
+
+.menu-item.active {
+    background: #f3e3e8;
+    color: #a9637d;
+    font-weight: bold;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #faeeee;
+    color: #bd7278;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background: #f4dfe0;
+}
+
+
+/* =====================================
+   4. KONTEN UTAMA
+===================================== */
+
+.main-content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    padding: 30px 35px;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   5. TOPBAR
+===================================== */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    color: #a96d83;
+    font-size: 27px;
+    margin-bottom: 7px;
+}
+
+.topbar p {
+    color: #99908b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fffefa;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(80, 65, 55, 0.04);
+}
+
+.admin-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f1dce4;
+    color: #a9637d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.admin-profile strong {
+    display: block;
+    font-size: 13px;
+    color: #625b59;
+}
+
+.admin-profile small {
+    display: block;
+    color: #99908b;
+    font-size: 11px;
+    margin-top: 4px;
+    word-break: break-all;
+}
+
+
+/* =====================================
+   6. PESAN ADMIN
+===================================== */
+
+#pesanAdmin {
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   7. KOTAK SAMBUTAN
+===================================== */
+
+.welcome-box {
+    background: linear-gradient(
+        120deg,
+        #f0dce2,
+        #f7e9df
+    );
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-box::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 25px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    right: -35px;
+    top: -50px;
+}
+
+.welcome-box h2 {
+    color: #85586b;
+    font-size: 23px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-box p {
+    color: #806b70;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =====================================
+   8. KARTU STATISTIK
+===================================== */
+
+.statistik-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.statistik-card {
+    background: #fffefa;
+    padding: 23px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    box-shadow: 0 3px 15px rgba(80, 65, 55, 0.04);
+    transition: 0.3s;
+}
+
+.statistik-card:hover {
+    transform: translateY(-3px);
+}
+
+.statistik-card:nth-child(1) {
+    border-left: 4px solid #91ad95;
+}
+
+.statistik-card:nth-child(2) {
+    border-left: 4px solid #c28ca4;
+}
+
+.statistik-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 13px;
+    background: #e8f0e7;
+    color: #6e9276;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.statistik-card:nth-child(2) .statistik-icon {
+    background: #f5e7ed;
+    color: #b87991;
+}
+
+.statistik-card p {
+    color: #99908b;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.statistik-card h2 {
+    color: #625b59;
+    font-size: 25px;
+}
+
+
+/* =====================================
+   9. JUDUL BAGIAN
+===================================== */
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #a96d83;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.section-header h3 {
+    color: #a96d83;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #99908b;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   10. AKSES CEPAT
+===================================== */
+
+.akses-cepat {
+    background: #fffefa;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 15px rgba(80, 65, 55, 0.04);
+}
+
+.akses-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.akses-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.akses-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(80, 65, 55, 0.08);
+}
+
+.akses-lavender {
+    background: #eeeafa;
+}
+
+.akses-sage {
+    background: #e8f0e7;
+}
+
+.akses-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.akses-detail {
+    flex: 1;
+    min-width: 0;
+}
+
+.akses-detail h4 {
+    font-size: 15px;
+    color: #75658f;
+    margin-bottom: 7px;
+}
+
+.akses-sage .akses-detail h4 {
+    color: #64866c;
+}
+
+.akses-detail p {
+    color: #827d7a;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.akses-btn {
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #76649e;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.akses-sage .akses-btn {
+    color: #668c70;
+}
+
+.akses-btn:hover {
+    background: white;
+    transform: translateX(3px);
+}
+
+
+/* =====================================
+   11. AKTIVITAS TERBARU
+===================================== */
+
+.aktivitas-box {
+    background: #fffefa;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 15px rgba(80, 65, 55, 0.04);
+}
+
+.aktivitas-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.aktivitas-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee9e2;
+}
+
+.aktivitas-item:last-child {
+    border-bottom: none;
+}
+
+.aktivitas-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: #f8eddf;
+    color: #b88a54;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+.aktivitas-detail {
+    flex: 1;
+    min-width: 0;
+}
+
+.aktivitas-detail strong {
+    display: block;
+    color: #625b59;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.aktivitas-detail p {
+    color: #88817c;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.aktivitas-tanggal {
+    color: #aaa09a;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+.aktivitas-kosong {
+    color: #99908b;
+    font-size: 13px;
+    padding: 15px 0;
+}
+
+
+/* =====================================
+   12. INFORMASI WEBSITE
+===================================== */
+
+.info-box {
+    background: #fffefa;
+    padding: 25px;
+    border-radius: 14px;
+    border-left: 4px solid #d5b38d;
+    box-shadow: 0 3px 15px rgba(80, 65, 55, 0.04);
+}
+
+.info-box h3 {
+    color: #a77e57;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.info-box p {
+    color: #88817c;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   13. HALAMAN DATA
+===================================== */
+
+.content-section {
+    animation: muncul 0.3s ease;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-container {
+    width: 100%;
+    background: #fffefa;
+    border-radius: 14px;
+    padding: 20px;
+    overflow-x: auto;
+    box-shadow: 0 3px 15px rgba(80, 65, 55, 0.04);
+}
+
+table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: #f4e9ed;
+}
+
+th {
+    padding: 15px 13px;
+    color: #a4677f;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px 13px;
+    border-bottom: 1px solid #eee9e2;
+    color: #77706c;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+tbody tr:hover {
+    background: #faf7f2;
+}
+
+
+/* =====================================
+   14. TOMBOL HAPUS
+===================================== */
+
+.hapus-btn {
+    padding: 8px 13px;
+    background: #faeeee;
+    color: #bd7278;
+    border: none;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hapus-btn:hover {
+    background: #f3dadd;
+}
+
+.hapus-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =====================================
+   15. RESPONSIVE TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .main-content {
+        width: calc(100% - 210px);
+        margin-left: 210px;
+        padding: 25px 20px;
+    }
+
+    .topbar h1 {
+        font-size: 23px;
+    }
+
+    .akses-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================
+   16. RESPONSIVE HP
+===================================== */
+
+@media (max-width: 600px) {
+
+    .admin-container {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        min-height: auto;
+        padding: 18px;
+    }
+
+    .sidebar-header {
+        margin-bottom: 18px;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .menu-item {
+        flex: 1;
+        justify-content: center;
+        padding: 11px 8px;
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .menu-item span {
+        font-size: 16px;
+    }
+
+    .sidebar-bottom {
+        margin-top: 15px;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 22px 15px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .topbar h1 {
+        font-size: 23px;
+    }
+
+    .admin-profile {
+        width: 100%;
+    }
+
+    .welcome-box {
+        padding: 22px;
+    }
+
+    .welcome-box h2 {
+        font-size: 20px;
+    }
+
+    .statistik-container {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .statistik-card {
+        padding: 18px;
+    }
+
+    .akses-cepat,
+    .aktivitas-box,
+    .info-box {
+        padding: 19px;
+    }
+
+    .akses-container {
+        grid-template-columns: 1fr;
+    }
+
+    .akses-card {
+        padding: 15px;
+    }
+
+    .table-container {
+        padding: 12px;
+    }
+
+}
+
+/* TOMBOL KEMBALI KE BERANDA */
+.beranda-btn {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #a6c9b2;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.beranda-btn:hover {
+    background-color: #85ad94;
+}
