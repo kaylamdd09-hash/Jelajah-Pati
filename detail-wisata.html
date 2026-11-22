@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detail Wisata | Jelajah Pati</title>
+
+    <link rel="stylesheet" href="detail-wisata.css">
+</head>
+
+<body>
+
+    <!-- =================================
+         NAVBAR
+    ================================== -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Jelajah <span>Pati.</span>
+        </a>
+
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="wisata.html" class="active">Wisata</a>
+            <a href="kuliner.html">Kuliner</a>
+            <a href="budaya.html">Budaya</a>
+            <a href="tempatnongkrong.html">Tempat Nongkrong</a>
+        </div>
+
+        <!-- PROFIL PENGGUNA -->
+        <div id="areaProfil">
+
+            <a href="login.html" class="btn-login-nav">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =================================
+         BREADCRUMB
+    ================================== -->
+    <div class="breadcrumb">
+
+        <a href="index.html">Beranda</a>
+
+        <span>/</span>
+
+        <a href="wisata.html">Wisata</a>
+
+        <span>/</span>
+
+        <span id="breadcrumbNama">
+            Detail Destinasi
+        </span>
+
+    </div>
+
+
+    <!-- =================================
+         DETAIL UTAMA
+    ================================== -->
+    <main class="detail-container">
+
+        <section class="detail-utama">
+
+            <!-- FOTO WISATA -->
+            <div class="foto-container">
+
+                <div class="foto-utama">
+
+                    <img
+                        id="fotoWisata"
+                        src=""
+                        alt="Foto tempat wisata"
+                    >
+
+                    <span class="foto-label">
+                        DESTINASI WISATA
+                    </span>
+
+                </div>
+
+                <div class="foto-caption">
+
+                    <span>JELAJAH PATI</span>
+
+                    <span id="captionLokasi"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMASI WISATA -->
+            <div class="informasi-utama">
+
+                <span class="kategori" id="kategoriWisata"></span>
+
+                <h1 id="namaWisata"></h1>
+
+                <p class="lokasi" id="lokasiWisata"></p>
+
+                <p class="ringkasan" id="ringkasanWisata"></p>
+
+                <div class="garis"></div>
+
+
+                <!-- INFORMASI TIKET -->
+                <div class="info-item">
+
+                    <div class="info-icon">🎟️</div>
+
+                    <div>
+                        <span>Informasi Tiket</span>
+                        <p id="tiketWisata"></p>
+                    </div>
+
+                </div>
+
+
+                <!-- JAM OPERASIONAL -->
+                <div class="info-item">
+
+                    <div class="info-icon">🕒</div>
+
+                    <div>
+                        <span>Jam Operasional</span>
+                        <p id="jamWisata"></p>
+                    </div>
+
+                </div>
+
+
+                <!-- ALAMAT -->
+                <div class="info-item">
+
+                    <div class="info-icon">📍</div>
+
+                    <div>
+                        <span>Lokasi</span>
+                        <p id="alamatWisata"></p>
+                    </div>
+
+                </div>
+
+
+                <!-- GOOGLE MAPS -->
+                <a
+                    href="#"
+                    id="tombolMaps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-maps"
+                >
+                    Lihat Lokasi di Google Maps
+                    <span>↗</span>
+                </a>
+
+
+                <!-- KEMBALI KE DAFTAR WISATA -->
+                <a href="wisata.html" class="btn-kembali">
+                    ← Kembali ke Daftar Wisata
+                </a>
+
+                <!-- KEMBALI KE DASHBOARD ADMIN -->
+                <a
+                    href="admin.html"
+                    id="tombolDashboardAdmin"
+                    class="btn-kembali"
+                    hidden
+                >
+                    ← Kembali ke Dashboard Admin
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             DESKRIPSI WISATA
+        ================================== -->
+        <section class="deskripsi-section">
+
+            <div class="judul-section">
+
+                <span class="subjudul">
+                    CERITA DESTINASI
+                </span>
+
+                <h2>Mengenal Lebih Dekat</h2>
+
+            </div>
+
+            <p id="deskripsiWisata"></p>
+
+        </section>
+
+
+        <!-- =================================
+             DAYA TARIK WISATA
+        ================================== -->
+        <section class="daya-tarik-section">
+
+            <div class="judul-section">
+
+                <span class="subjudul">
+                    YANG MENARIK
+                </span>
+
+                <h2>Daya Tarik Destinasi</h2>
+
+            </div>
+
+            <div
+                class="daya-tarik-grid"
+                id="daftarDayaTarik"
+            >
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             TIPS BERKUNJUNG
+        ================================== -->
+        <section class="tips-section">
+
+            <div class="tips-icon">
+                🌿
+            </div>
+
+            <div>
+
+                <span class="subjudul">
+                    SEBELUM BERANGKAT
+                </span>
+
+                <h2>Tips Berkunjung</h2>
+
+                <p>
+                    Cari tahu kondisi cuaca, persiapkan kebutuhan
+                    perjalanan, dan tetap jaga kebersihan selama
+                    menikmati destinasi wisata.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             REVIEW PENGUNJUNG
+        ================================== -->
+        <section class="review-section">
+
+            <div class="judul-section">
+
+                <span class="subjudul">
+                    CERITA PARA PENGUNJUNG
+                </span>
+
+                <h2>Review Pengunjung</h2>
+
+                <p>
+                    Bagikan pengalamanmu setelah mengunjungi
+                    destinasi wisata ini.
+                </p>
+
+            </div>
+
+
+            <!-- FORM REVIEW -->
+            <div class="form-review">
+
+                <h3>Tulis Review Kamu</h3>
+
+
+                <!-- JIKA BELUM LOGIN -->
+                <div
+                    id="belumLogin"
+                    hidden
+                >
+
+                    <p>
+                        Silakan login terlebih dahulu untuk
+                        memberikan review.
+                    </p>
+
+                    <a
+                        href="login.html"
+                        class="btn-login-review"
+                    >
+                        Login untuk Review
+                    </a>
+
+                </div>
+
+
+                <!-- JIKA SUDAH LOGIN -->
+                <form
+                    id="formReview"
+                    hidden
+                >
+
+                    <!-- RATING -->
+                    <label>
+                        Rating Destinasi
+                    </label>
+
+                    <div class="rating-input">
+
+                        <input
+                            type="radio"
+                            name="rating"
+                            id="bintang5"
+                            value="5"
+                        >
+
+                        <label for="bintang5">★</label>
+
+
+                        <input
+                            type="radio"
+                            name="rating"
+                            id="bintang4"
+                            value="4"
+                        >
+
+                        <label for="bintang4">★</label>
+
+
+                        <input
+                            type="radio"
+                            name="rating"
+                            id="bintang3"
+                            value="3"
+                        >
+
+                        <label for="bintang3">★</label>
+
+
+                        <input
+                            type="radio"
+                            name="rating"
+                            id="bintang2"
+                            value="2"
+                        >
+
+                        <label for="bintang2">★</label>
+
+
+                        <input
+                            type="radio"
+                            name="rating"
+                            id="bintang1"
+                            value="1"
+                        >
+
+                        <label for="bintang1">★</label>
+
+                    </div>
+
+
+                    <!-- KOMENTAR -->
+                    <label for="komentarReview">
+                        Komentar
+                    </label>
+
+                    <textarea
+                        id="komentarReview"
+                        placeholder="Ceritakan pengalamanmu di tempat ini..."
+                        required
+                    ></textarea>
+
+
+                    <!-- TOMBOL KIRIM -->
+                    <button type="submit">
+                        Kirim Review
+                    </button>
+
+                    <p id="pesanReview"></p>
+
+                </form>
+
+            </div>
+
+
+            <!-- =================================
+                 DAFTAR REVIEW
+            ================================== -->
+            <div class="daftar-review">
+
+                <h3>Pengalaman Pengunjung</h3>
+
+                <div id="daftarReview">
+
+                    <p>Memuat review...</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             REKOMENDASI WISATA
+        ================================== -->
+        <section class="rekomendasi-section">
+
+            <div class="judul-rekomendasi">
+
+                <div>
+
+                    <span class="subjudul">
+                        JELAJAHI LEBIH BANYAK
+                    </span>
+
+                    <h2>Destinasi Lainnya</h2>
+
+                </div>
+
+                <a href="wisata.html">
+                    Lihat Semua →
+                </a>
+
+            </div>
+
+
+            <div
+                class="rekomendasi-grid"
+                id="rekomendasiWisata"
+            >
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+    <footer>
+
+        <p>
+            © 2026 Jelajah Pati.
+            Mengenal Pati Lebih Dekat.
+        </p>
+
+    </footer>
+
+
+    <!-- =================================
+         JAVASCRIPT DETAIL WISATA + FIREBASE
+    ================================== -->
+    <script
+        type="module"
+        src="detail-wisata.js"
+    ></script>
+
+</body>
+</html>
