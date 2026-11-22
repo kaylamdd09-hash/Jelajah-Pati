@@ -1,0 +1,820 @@
+
+/* =====================================
+   1. TAMPILAN DASAR
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #fffafd;
+    color: #76566c;
+    line-height: 1.7;
+}
+
+/* TAMBAHAN: AGAR ELEMEN HIDDEN BERFUNGSI */
+[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================
+   2. NAVBAR
+========================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 7%;
+
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 4px 20px rgba(100,75,120,0.07);
+}
+
+/* LOGO */
+.logo {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    text-decoration: none;
+    color: #80649b;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+/* MENU NAVBAR */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+/* TULISAN MENU */
+.menu a {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    text-decoration: none;
+    color: #796b82;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+    padding-bottom: 6px;
+}
+
+/* GARIS BAWAH NAVBAR */
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #A58ABB;
+    left: 0;
+    bottom: -7px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+/* EFEK HOVER */
+.menu a:hover {
+    color: #A58ABB;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* MENU AKTIF */
+.menu a.active,
+.menu a.aktif {
+    color: #A58ABB;
+}
+
+.menu a.active::after,
+.menu a.aktif::after {
+    width: 100%;
+    background: #A58ABB;
+}
+
+
+/* =====================================
+   TAMBAHAN AREA PROFIL DAN LOGIN
+===================================== */
+
+#areaProfil {
+    display: flex;
+    align-items: center;
+}
+
+.btn-login-nav {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #A58ABB;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-login-nav:hover {
+    background: #80649b;
+    transform: translateY(-2px);
+}
+
+.profil-pengguna {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #796b82;
+    font-weight: bold;
+}
+
+.email-pengguna {
+    max-width: 190px;
+    overflow-wrap: anywhere;
+}
+
+.btn-logout {
+    padding: 9px 15px;
+    background: #f8dce5;
+    color: #80649b;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background: #f1c9d9;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   3. TOMBOL KEMBALI
+===================================== */
+
+.navigasi-detail {
+    padding: 28px 8% 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tombol-kembali {
+    display: inline-block;
+    color: #a56d89;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tombol-kembali:hover {
+    color: #d47d9d;
+    transform: translateX(-4px);
+}
+
+
+/* =====================================
+   4. HERO DETAIL
+===================================== */
+
+.detail-hero {
+    margin: 15px 8% 65px;
+    padding: 55px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 45px;
+
+    background:
+        radial-gradient(circle at 10% 20%,
+        rgba(255,255,255,0.8) 0 5px,
+        transparent 6px),
+        linear-gradient(125deg,
+        #f8dce5,
+        #fff3d9 55%,
+        #d9ebd9);
+
+    background-size: 35px 35px, auto;
+    border-radius: 35px 12px 35px 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-hero::after {
+    content: "✿";
+    position: absolute;
+    right: 35%;
+    bottom: -55px;
+    font-size: 180px;
+    color: rgba(255,255,255,0.35);
+    pointer-events: none;
+}
+
+.detail-teks {
+    position: relative;
+    z-index: 1;
+}
+
+.label-detail {
+    display: inline-block;
+    padding: 8px 17px;
+    background: rgba(255,255,255,0.75);
+    color: #bd7595;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.detail-teks h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 20px 0 15px;
+    color: #76566c;
+}
+
+.detail-lokasi {
+    color: #a56d89;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.detail-deskripsi {
+    max-width: 550px;
+    font-size: 15px;
+    color: #816e7d;
+}
+
+.detail-foto {
+    position: relative;
+    z-index: 1;
+}
+
+.detail-foto img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 100px 18px 100px 18px;
+    border: 8px solid rgba(255,255,255,0.8);
+    box-shadow: 0 15px 35px rgba(118,86,108,0.15);
+}
+
+
+/* =====================================
+   5. KONTEN DETAIL
+===================================== */
+
+.konten-detail {
+    width: 84%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.judul-bagian {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 25px;
+}
+
+.nomor-bagian {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: #f8dce5;
+    color: #bd7595;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.subjudul-bagian {
+    font-size: 11px;
+    color: #c18aa2;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.judul-bagian h2 {
+    font-size: 25px;
+    color: #76566c;
+}
+
+
+/* =====================================
+   6. CERITA BUDAYA
+===================================== */
+
+.cerita-budaya {
+    padding: 35px;
+    margin-bottom: 65px;
+    background: #fff3e8;
+    border-radius: 15px 35px 15px 35px;
+    border-left: 5px solid #e6b8a5;
+    position: relative;
+}
+
+.cerita-budaya::after {
+    content: "❝";
+    position: absolute;
+    right: 28px;
+    top: 15px;
+    font-size: 75px;
+    color: rgba(212,125,157,0.15);
+}
+
+.cerita-budaya > p {
+    color: #816e7d;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =====================================
+   7. INFORMASI BUDAYA
+===================================== */
+
+.informasi-budaya {
+    margin-bottom: 70px;
+}
+
+.kumpulan-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.info-card {
+    padding: 28px;
+    border-radius: 25px 12px 25px 12px;
+    min-height: 230px;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-7px);
+}
+
+.info-pink {
+    background: #f9e4ec;
+}
+
+.info-mint {
+    background: #e7f2e8;
+}
+
+.info-biru {
+    background: #e8f1fa;
+}
+
+.ikon-info {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.7);
+    border-radius: 16px;
+    font-size: 25px;
+    color: #bd7595;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #76566c;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #816e7d;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   8. FAKTA MENARIK
+===================================== */
+
+.fakta-budaya {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 40px;
+    margin-bottom: 70px;
+    background: linear-gradient(120deg, #dceaf8, #f8dce5);
+    border-radius: 30px 12px 30px 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fakta-teks {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+}
+
+.fakta-teks h2 {
+    font-size: 25px;
+    margin: 8px 0 15px;
+    color: #76566c;
+}
+
+.fakta-teks > p:last-child {
+    font-size: 15px;
+    color: #816e7d;
+}
+
+.hiasan-fakta {
+    font-size: 110px;
+    color: rgba(255,255,255,0.65);
+}
+
+
+/* =====================================
+   9. AJAKAN BUDAYA
+===================================== */
+
+.ajakan-budaya {
+    text-align: center;
+    padding: 55px 30px;
+    margin-bottom: 70px;
+    background: #fff8ef;
+    border: 2px dashed #e9c6d4;
+    border-radius: 30px;
+}
+
+.ajakan-budaya > p:first-child {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #c18aa2;
+    font-weight: bold;
+}
+
+.ajakan-budaya h2 {
+    color: #76566c;
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.ajakan-budaya > p:nth-of-type(2) {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    font-size: 14px;
+    color: #816e7d;
+}
+
+.tombol-jelajah {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    background: #d47d9d;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tombol-jelajah:hover {
+    background: #bd6d8e;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #f6dce7;
+    color: #986b83;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   11. RESPONSIVE TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .menu {
+        gap: 15px;
+    }
+
+    .detail-hero {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 35px;
+        gap: 25px;
+    }
+
+    .detail-teks h1 {
+        font-size: 32px;
+    }
+
+    .detail-foto img {
+        height: 280px;
+    }
+
+    .konten-detail {
+        width: 90%;
+    }
+
+    .kumpulan-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================
+   12. RESPONSIVE HP
+===================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 4%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    /* TAMBAHAN AREA PROFIL DI HP */
+    #areaProfil {
+        justify-content: center;
+    }
+
+    .profil-pengguna {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .email-pengguna {
+        font-size: 11px;
+    }
+
+    .navigasi-detail {
+        padding: 22px 6% 8px;
+        gap: 12px;
+    }
+
+    .detail-hero {
+        grid-template-columns: 1fr;
+        margin: 12px 5% 45px;
+        padding: 28px 22px;
+        gap: 25px;
+        border-radius: 25px 10px 25px 10px;
+    }
+
+    .detail-teks h1 {
+        font-size: 29px;
+    }
+
+    .detail-deskripsi {
+        font-size: 14px;
+    }
+
+    .detail-foto img {
+        height: 230px;
+        border-radius: 65px 15px 65px 15px;
+    }
+
+    .konten-detail {
+        width: 90%;
+    }
+
+    .judul-bagian h2 {
+        font-size: 21px;
+    }
+
+    .cerita-budaya {
+        padding: 25px 20px;
+        margin-bottom: 45px;
+    }
+
+    .cerita-budaya > p {
+        font-size: 14px;
+    }
+
+    .kumpulan-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .info-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .fakta-budaya {
+        padding: 28px 22px;
+        margin-bottom: 45px;
+    }
+
+    .fakta-teks h2 {
+        font-size: 21px;
+    }
+
+    .hiasan-fakta {
+        display: none;
+    }
+
+    .ajakan-budaya {
+        padding: 40px 20px;
+        margin-bottom: 45px;
+    }
+
+    .ajakan-budaya h2 {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =====================================
+   13. REVIEW BUDAYA
+===================================== */
+
+.review-budaya {
+    margin-bottom: 70px;
+}
+
+.pesan-login,
+.form-review {
+    padding: 28px;
+    margin-bottom: 25px;
+    background: #fff3e8;
+    border-radius: 20px;
+    border-left: 5px solid #e6b8a5;
+}
+
+.pesan-login p {
+    margin-bottom: 15px;
+    color: #816e7d;
+    font-size: 14px;
+}
+
+.tombol-login-review,
+.form-review button {
+    display: inline-block;
+    padding: 11px 22px;
+    border: none;
+    border-radius: 25px;
+    background: #d47d9d;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tombol-login-review:hover,
+.form-review button:hover {
+    background: #bd6d8e;
+    transform: translateY(-2px);
+}
+
+.form-review label {
+    display: block;
+    margin: 12px 0 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #76566c;
+}
+
+.form-review select,
+.form-review textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e9c6d4;
+    border-radius: 12px;
+    background: white;
+    color: #76566c;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-review textarea {
+    resize: vertical;
+}
+
+.form-review button {
+    margin-top: 15px;
+}
+
+#pesanReview {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #816e7d;
+}
+
+#daftarReview {
+    display: grid;
+    gap: 15px;
+}
+
+.review-card {
+    padding: 22px;
+    background: #f9e4ec;
+    border-radius: 18px 10px 18px 10px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.review-nama {
+    font-weight: bold;
+    color: #76566c;
+}
+
+.review-rating {
+    color: #bd7595;
+}
+
+.review-komentar {
+    color: #816e7d;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.review-tanggal {
+    display: block;
+    margin-top: 10px;
+    color: #a58a9b;
+    font-size: 12px;
+}
+
+.review-kosong {
+    padding: 20px;
+    color: #816e7d;
+    background: #fff8ef;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .pesan-login,
+    .form-review {
+        padding: 22px 18px;
+    }
+
+    .review-card {
+        padding: 18px;
+    }
+}
