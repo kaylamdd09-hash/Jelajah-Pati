@@ -1,0 +1,978 @@
+
+/* ================================= */
+/* PENGATURAN DASAR */
+/* ================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fffafd;
+    color: #76566c;
+    overflow-x: hidden;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ================================= */
+/* NAVBAR */
+/* ================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 18px 5%;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(190, 133, 163, 0.09);
+}
+
+.logo {
+    text-decoration: none;
+    color: #d47d9d;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #896f83;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #d47d9d;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.aktif {
+    color: #d47d9d;
+}
+
+.menu a:hover::after,
+.menu a.aktif::after {
+    width: 100%;
+}
+
+/* ================================= */
+/* PROFIL DAN LOGIN */
+/* ================================= */
+
+#areaProfil {
+    display: flex;
+    align-items: center;
+}
+
+.btn-login-nav,
+.btn-login-review {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d47d9d;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-login-nav:hover,
+.btn-login-review:hover {
+    background: #b76d8c;
+    transform: translateY(-2px);
+}
+
+.profil-pengguna {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #896f83;
+    font-weight: bold;
+}
+
+.email-pengguna {
+    max-width: 190px;
+    overflow-wrap: anywhere;
+}
+
+.btn-logout {
+    padding: 9px 15px;
+    background: #f3dce6;
+    color: #a75d80;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.btn-logout:hover {
+    background: #eac5d5;
+    transform: translateY(-2px);
+}
+
+/* ================================= */
+/* TOMBOL KEMBALI */
+/* ================================= */
+
+.navigasi-detail {
+    padding: 25px 8% 10px;
+}
+
+.tombol-kembali {
+    display: inline-block;
+    color: #ce7d9c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tombol-kembali:hover {
+    color: #a75d80;
+    transform: translateX(-5px);
+}
+
+
+/* ================================= */
+/* HERO DETAIL KULINER */
+/* ================================= */
+
+.hero-detail {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 45px 8% 80px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 8% 15%,
+            rgba(244, 180, 200, 0.45) 0 7px,
+            transparent 8px
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(175, 211, 183, 0.55) 0 8px,
+            transparent 9px
+        ),
+        linear-gradient(135deg, #fff0f5, #fff9ef 55%, #f0f8f0);
+}
+
+.hero-detail::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 2px dashed rgba(212, 125, 157, 0.25);
+    border-radius: 50%;
+    left: -140px;
+    bottom: -140px;
+}
+
+.hero-detail::after {
+    content: "✿";
+    position: absolute;
+    top: 30px;
+    right: 42%;
+    color: #e7a9bd;
+    font-size: 38px;
+}
+
+.hero-teks {
+    position: relative;
+    z-index: 2;
+}
+
+.label-atas {
+    display: inline-block;
+    color: #c47c9b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.kategori-detail {
+    display: block;
+    width: fit-content;
+    padding: 9px 17px;
+    border-radius: 25px;
+    background: #f9dce7;
+    color: #b76d8c;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.hero-teks h1 {
+    color: #b86d91;
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.lokasi-detail {
+    color: #9c8396;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.deskripsi-utama {
+    max-width: 520px;
+    color: #816e7d;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* ================================= */
+/* HIASAN GARIS */
+/* ================================= */
+
+.hiasan-garis {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+.hiasan-garis span {
+    display: block;
+    width: 9px;
+    height: 9px;
+    background: #e9a9bd;
+    border-radius: 50%;
+}
+
+.hiasan-garis span:nth-child(2) {
+    width: 55px;
+    height: 3px;
+    border-radius: 10px;
+    background: #a8cbb0;
+}
+
+.hiasan-garis span:nth-child(3) {
+    background: #e8b77e;
+}
+
+
+/* ================================= */
+/* FOTO HERO */
+/* ================================= */
+
+.hero-gambar {
+    position: relative;
+    min-width: 0;
+    padding: 15px;
+}
+
+.hero-gambar img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 45% 45% 22px 22px;
+    border: 7px solid white;
+    box-shadow: 0 18px 35px rgba(189, 133, 160, 0.19);
+    transition: 0.5s;
+}
+
+.hero-gambar img:hover {
+    transform: translateY(-5px) rotate(1deg);
+}
+
+.lingkaran-hiasan {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 2px solid rgba(212, 125, 157, 0.35);
+    border-radius: 50%;
+    top: -15px;
+    right: -5px;
+    box-shadow:
+        0 0 0 12px rgba(244, 180, 200, 0.10),
+        0 0 0 25px rgba(168, 203, 176, 0.10);
+}
+
+.label-gambar {
+    position: absolute;
+    z-index: 3;
+    bottom: 35px;
+    left: 0;
+    padding: 12px 20px;
+    background: #fff;
+    color: #c47c9b;
+    border: 1px solid #f7dce6;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(189, 133, 160, 0.15);
+}
+
+
+/* ================================= */
+/* DETAIL CONTAINER */
+/* ================================= */
+
+.detail-container {
+    position: relative;
+    padding: 70px 8%;
+    background:
+        radial-gradient(
+            circle at 95% 15%,
+            rgba(220, 234, 248, 0.35) 0 5px,
+            transparent 6px
+        ),
+        #fffafd;
+}
+
+.judul-bagian {
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.nomor-bagian {
+    display: inline-block;
+    color: #d18ba7;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.judul-bagian h2 {
+    color: #b86d91;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.judul-bagian p {
+    color: #927b8d;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ================================= */
+/* CERITA KULINER */
+/* ================================= */
+
+.tentang-kuliner {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+    align-items: center;
+    margin-bottom: 85px;
+}
+
+.cerita-kuliner {
+    position: relative;
+    padding: 35px;
+    background: linear-gradient(135deg, #fff1e3, #fff8ed);
+    border: 1px solid #f6dfc9;
+    border-radius: 12px 28px 28px 28px;
+    box-shadow: 0 9px 25px rgba(205, 160, 126, 0.10);
+}
+
+.cerita-kuliner::after {
+    content: "“";
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    color: #efcfb5;
+    font-family: Georgia, serif;
+    font-size: 85px;
+    line-height: 1;
+}
+
+.cerita-kuliner p {
+    position: relative;
+    z-index: 1;
+    color: #866f7e;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.cerita-ornamen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.cerita-ornamen span {
+    padding: 7px 12px;
+    background: #f9dce7;
+    color: #b76d8c;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* ================================= */
+/* INFORMASI KULINER */
+/* ================================= */
+
+.informasi-kuliner {
+    margin-bottom: 85px;
+}
+
+.grid-informasi {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid #f5e2eb;
+    border-radius: 20px 20px 20px 8px;
+    transition: 0.3s;
+}
+
+.info-card:nth-child(4n+1) {
+    background: #fff2f6;
+}
+
+.info-card:nth-child(4n+2) {
+    background: #f0f7f0;
+    border-color: #dcebdd;
+}
+
+.info-card:nth-child(4n+3) {
+    background: #fff8e9;
+    border-color: #f5e8ca;
+}
+
+.info-card:nth-child(4n) {
+    background: #eff6fc;
+    border-color: #dce9f5;
+}
+
+.info-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(180, 132, 159, 0.13);
+}
+
+.ikon-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    font-size: 23px;
+}
+
+.info-card h3 {
+    color: #b86d91;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #816e7d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ================================= */
+/* FAKTA MENARIK */
+/* ================================= */
+
+.fakta-kuliner {
+    position: relative;
+    overflow: hidden;
+    padding: 48px;
+    margin-bottom: 85px;
+    text-align: center;
+    background: linear-gradient(120deg, #f9dfe9, #fff0dc, #e5f1e4);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30px 10px 30px 10px;
+}
+
+.fakta-kuliner::before,
+.fakta-kuliner::after {
+    content: "✿";
+    position: absolute;
+    color: rgba(192, 126, 158, 0.25);
+    font-size: 100px;
+}
+
+.fakta-kuliner::before {
+    top: -35px;
+    left: 15px;
+}
+
+.fakta-kuliner::after {
+    bottom: -40px;
+    right: 20px;
+}
+
+.fakta-ornamen {
+    color: #d18ba7;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.fakta-kuliner h2 {
+    color: #b86d91;
+    font-size: 29px;
+    margin-bottom: 15px;
+}
+
+.fakta-kuliner p {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    margin: auto;
+    color: #806d7c;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ================================= */
+/* BAGIAN REVIEW */
+/* ================================= */
+
+.review-section {
+    margin-bottom: 85px;
+}
+
+.pesan-login {
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(120deg, #fff0f5, #f0f7f0);
+    border: 1px solid #f5e2eb;
+    border-radius: 18px;
+}
+
+.pesan-login p {
+    margin-bottom: 15px;
+    color: #806d7c;
+    font-size: 14px;
+}
+
+.form-review {
+    padding: 30px;
+    margin-bottom: 35px;
+    background: #fff;
+    border: 1px solid #f2dce6;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(180, 132, 159, 0.08);
+}
+
+.form-review h3,
+.daftar-review h3 {
+    color: #b86d91;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.label-rating,
+.label-komentar {
+    display: block;
+    color: #806d7c;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.pilihan-rating {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.pilihan-rating label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 9px 13px;
+    background: #fff5e9;
+    border: 1px solid #f3dfc8;
+    border-radius: 20px;
+    color: #876b79;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pilihan-rating input {
+    accent-color: #d47d9d;
+}
+
+.pilihan-rating span {
+    color: #e4a94f;
+    font-size: 17px;
+}
+
+#komentarReview {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ead8e1;
+    border-radius: 12px;
+    outline: none;
+    resize: vertical;
+    color: #76566c;
+    font-size: 14px;
+    line-height: 1.7;
+    background: #fffafd;
+}
+
+#komentarReview:focus {
+    border-color: #d47d9d;
+    box-shadow: 0 0 0 3px rgba(212, 125, 157, 0.10);
+}
+
+.pesan-review {
+    min-height: 20px;
+    margin-bottom: 10px;
+    color: #b76d8c;
+    font-size: 13px;
+}
+
+#tombolKirimReview {
+    padding: 12px 24px;
+    background: #d47d9d;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#tombolKirimReview:hover {
+    background: #b76d8c;
+}
+
+#tombolKirimReview:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ================================= */
+/* DAFTAR REVIEW */
+/* ================================= */
+
+.daftar-review {
+    padding: 30px;
+    background: linear-gradient(135deg, #fff8f2, #fffafd);
+    border: 1px solid #f3e2e9;
+    border-radius: 20px;
+}
+
+.review-card {
+    padding: 22px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #f1e1e8;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(180, 132, 159, 0.06);
+}
+
+.review-card:last-child {
+    margin-bottom: 0;
+}
+
+.review-card h4 {
+    color: #b86d91;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.review-rating {
+    color: #e5a642;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    color: #806d7c;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.review-tanggal {
+    display: block;
+    margin-top: 12px;
+    color: #ad98a5;
+    font-size: 11px;
+}
+
+.review-kosong {
+    padding: 20px;
+    text-align: center;
+    color: #927b8d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ================================= */
+/* KULINER LAINNYA */
+/* ================================= */
+
+.kuliner-lainnya {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 32px;
+    background: linear-gradient(110deg, #fff0f5, #f0f7f0);
+    border: 1px solid #f5e2eb;
+    border-radius: 25px;
+}
+
+.kuliner-lainnya .judul-bagian {
+    margin-bottom: 0;
+}
+
+.kuliner-lainnya .judul-bagian h2 {
+    font-size: 25px;
+}
+
+.tombol-jelajah {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 14px 23px;
+    background: #d47d9d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tombol-jelajah:hover {
+    background: #b76d8c;
+    transform: translateY(-4px);
+}
+
+
+/* ================================= */
+/* FOOTER */
+/* ================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #f6dce7;
+    color: #986b83;
+    font-size: 13px;
+}
+
+
+/* ================================= */
+/* RESPONSIVE TABLET */
+/* ================================= */
+
+@media (max-width: 900px) {
+
+    .hero-detail {
+        gap: 25px;
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero-teks h1 {
+        font-size: 38px;
+    }
+
+    .hero-gambar img {
+        height: 320px;
+    }
+
+    .detail-container {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .tentang-kuliner {
+        gap: 25px;
+    }
+
+    .kuliner-lainnya {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* ================================= */
+/* RESPONSIVE HP */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .navigasi-detail {
+        padding: 20px 5% 5px;
+    }
+
+    .hero-detail {
+        grid-template-columns: 1fr;
+        padding: 35px 6% 55px;
+        gap: 20px;
+    }
+
+    .hero-teks h1 {
+        font-size: 35px;
+    }
+
+    .deskripsi-utama {
+        font-size: 14px;
+    }
+
+    .hero-gambar img {
+        height: 270px;
+        border-radius: 35% 35% 15px 15px;
+    }
+
+    .lingkaran-hiasan {
+        width: 180px;
+        height: 180px;
+    }
+
+    .label-gambar {
+        bottom: 25px;
+        left: 5px;
+    }
+
+    .detail-container {
+        padding: 50px 6%;
+    }
+
+    .tentang-kuliner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .judul-bagian h2 {
+        font-size: 25px;
+    }
+
+    .cerita-kuliner {
+        padding: 25px;
+    }
+
+    .grid-informasi {
+        grid-template-columns: 1fr;
+    }
+
+    .informasi-kuliner {
+        margin-bottom: 60px;
+    }
+
+    .fakta-kuliner {
+        padding: 35px 22px;
+        margin-bottom: 60px;
+    }
+
+    .fakta-kuliner h2 {
+        font-size: 25px;
+    }
+
+    .form-review,
+    .daftar-review {
+        padding: 20px;
+    }
+
+    .pilihan-rating {
+        gap: 7px;
+    }
+
+    .pilihan-rating label {
+        padding: 8px 10px;
+    }
+
+    .kuliner-lainnya {
+        padding: 25px;
+    }
+
+    .kuliner-lainnya .judul-bagian h2 {
+        font-size: 23px;
+    }
+
+    .tombol-jelajah {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer {
+        padding: 20px 15px;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+}
